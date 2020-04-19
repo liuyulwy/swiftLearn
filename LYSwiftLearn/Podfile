@@ -7,7 +7,7 @@ target 'LYSwiftLearn' do
 
   # Pods for LYSwiftLearn
 
-	pod 'ReachabilitySwift'	#网络连接状况判断
+    pod 'ReachabilitySwift'	#网络连接状况判断
   	pod 'Moya'	#网络请求Alamofire的封装
   	pod 'Alamofire'	#网络请求框架
   	pod 'Result'	# 
@@ -34,69 +34,73 @@ target 'LYSwiftLearn' do
   	pod 'Hue'	#使用的是hex颜色值
   	#pod 'R.swift'	#一种优雅安全的方式使用资源文件
   	#pod 'SwiftGen' #资源文件
+    pod 'DeviceKit'    #设备
+    pod 'SwiftyStoreKit'  #内购
   	pod 'CryptoSwift' #加密解密库
+    pod 'SwiftyUserDefaults'  #对NSUserDefaults的封装
+    
+    pod 'IQKeyboardManagerSwift'  #键盘
+    pod 'RAMAnimatedTabBarController'  #tabbarcontroller
+    pod "ESTabBarController-swift"
+    pod "SkeletonView"  #未显示内容时占位视图
+    pod 'YPImagePicker'  #图片选择
+#    pod 'ImagePicker'  #图片选择
+    pod 'FSPagerView'  #banner滚动图
+    pod 'KeychainAccess'  #Keychain
+    pod 'NVActivityIndicatorView'  #加载指示器
+    pod 'Kingfisher'  #图片下载、缓存的框架，灵感取自于SDWebImage
+    ##日志
+    pod 'XCGLogger'
+    pod 'SwiftLint'    #限定 Swift 样式和条例的工具
+    
+    
+#  	pod 'Hero' #是一个建立 iOS 视图控制器转换的库
+#  	pod 'SwiftDate'		#日期处理
+#  	pod 'MonkeyKing'	#社会化分享框架
+#  	pod 'Spring'	#动画框架
+#  	#pod "ViewAnimator"	#动画库
+#  	pod "Spruce"	#动画库
+#  	pod "Macaw" #动画
+#  	pod 'NotificationBannerSwift'	#通知动画
+#  	pod 'SwiftEntryKit'	#弹窗
+#  	pod 'SwipeCellKit'	#可滑动Swipeable UITableViewCell
+#  	pod "CollectionKit"	#collectionview组件
+#
+#	pod 'Material'	#集Animation和UI与一身
+#
+#	pod 'Instructions'	#应用于操作指南、新手教程。
+#	pod 'Siren'	#判断版本
 
 
 
-  	pod 'Hero' #是一个建立 iOS 视图控制器转换的库
-  	pod "SkeletonView"	#未显示内容时占位视图
-	#pod 'YPImagePicker'	#图片选择
-	pod 'ImagePicker'	#图片选择
-	pod 'FSPagerView'	#banner滚动图
-  	pod 'SwiftDate'		#日期处理
-  	pod 'MonkeyKing'	#社会化分享框架
-  	pod 'Spring'	#动画框架
-  	#pod "ViewAnimator"	#动画库
-  	pod "Spruce"	#动画库
-  	pod "Macaw" #动画
-  	pod 'NotificationBannerSwift'	#通知动画
-  	pod 'SwiftEntryKit'	#弹窗
-  	pod 'SwipeCellKit'	#可滑动Swipeable UITableViewCell
-  	pod "CollectionKit"	#collectionview组件
-  	pod 'SwiftyUserDefaults'	#对NSUserDefaults的封装
-  	pod 'KeychainAccess'	#Keychain
-  	pod 'NVActivityIndicatorView'	#加载指示器
-	pod 'Material'	#集Animation和UI与一身
-
-	pod 'Instructions'	#应用于操作指南、新手教程。
-	pod 'Siren'	#判断版本
-
-	pod 'RAMAnimatedTabBarController'	#tabbarcontroller 
-	pod "ESTabBarController-swift"
-
-	pod 'FoldingCell' 	#折叠cell
-	pod 'SCLAlertView'	#alertView
-	pod 'ActiveLabel'	#label 点击事件
-	pod 'TextFieldEffects'	#非常nice的输入框视图
-	pod 'PhoneNumberKit'	#针对电话号码格式做的一个输入框
-	pod 'TextAttributes'	#封装NSAttributedString的框架
-	pod 'HanekeSwift'	#轻量带缓存高性能图片加载组件。
-	pod 'Kingfisher'	#图片下载、缓存的框架，灵感取自于SDWebImage
-	pod 'Eureka'	#优雅的创建表格
+#	pod 'FoldingCell' 	#折叠cell
+#	pod 'SCLAlertView'	#alertView
+#	pod 'ActiveLabel'	#label 点击事件
+#	pod 'TextFieldEffects'	#非常nice的输入框视图
+#	pod 'PhoneNumberKit'	#针对电话号码格式做的一个输入框
+#	pod 'TextAttributes'	#封装NSAttributedString的框架
+#	pod 'HanekeSwift'	#轻量带缓存高性能图片加载组件。
+#	pod 'Eureka'	#优雅的创建表格
 	#pod 'XLPagerTabStrip' #button bar
 
 	#pod 'SwiftOCR'	#文字图像识别库
-	pod 'SwiftyStoreKit'	#内购
-	pod 'Appz'	#App间跳转和DeepLink
 
-	pod 'Permission'	#权限
-	pod 'IQKeyboardManagerSwift'	#键盘
-	pod 'DeviceKit'		#设备
-	pod 'SQLite.swift'	#数据库
+#	pod 'Appz'	#App间跳转和DeepLink
+#
+#	pod 'Permission'	#权限
+#	pod 'SQLite.swift'	#数据库
+#
 
-	#测试
-	pod 'Quick'
-    pod 'Nimble'
 
-    #日志
-    pod 'XCGLogger'
-
-    pod 'SwiftLint'		#限定 Swift 样式和条例的工具
 
 
   target 'LYSwiftLearnTests' do
     inherit! :search_paths
     # Pods for testing
+    
+    #  #测试
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'LYSwiftLearnUITests' do
