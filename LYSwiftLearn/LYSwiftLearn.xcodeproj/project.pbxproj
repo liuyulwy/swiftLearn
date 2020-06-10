@@ -18,6 +18,8 @@
 		17B16AB12490E41900E259F1 /* ExampleHighlightableContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AAA2490E41900E259F1 /* ExampleHighlightableContentView.swift */; };
 		17B16AB22490E41900E259F1 /* ExampleTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AAB2490E41900E259F1 /* ExampleTipsContentView.swift */; };
 		17B16AB32490E41900E259F1 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AAC2490E41900E259F1 /* ExampleIrregularityContentView.swift */; };
+		17CDEE0424911F6E0052928B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CDEE0224911EAD0052928B /* pop.framework */; };
+		17CDEE0524911F6E0052928B /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17CDEE0224911EAD0052928B /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		17ECA9A524386CAF00A59C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECA9A424386CAF00A59C52 /* AppDelegate.swift */; };
 		17ECA9A924386CAF00A59C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECA9A824386CAF00A59C52 /* ViewController.swift */; };
 		17ECA9AE24386CB200A59C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17ECA9AD24386CB200A59C52 /* Assets.xcassets */; };
@@ -47,6 +49,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		17CDEE0624911F6F0052928B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17CDEE0524911F6E0052928B /* pop.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E5B2C1B4DC088ABCB31A129 /* Pods-LYSwiftLearnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSwiftLearnUITests.debug.xcconfig"; path = "Target Support Files/Pods-LYSwiftLearnUITests/Pods-LYSwiftLearnUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		17B16A9B24906DF100E259F1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -60,6 +76,7 @@
 		17B16AAA2490E41900E259F1 /* ExampleHighlightableContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleHighlightableContentView.swift; sourceTree = "<group>"; };
 		17B16AAB2490E41900E259F1 /* ExampleTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTipsContentView.swift; sourceTree = "<group>"; };
 		17B16AAC2490E41900E259F1 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
+		17CDEE0224911EAD0052928B /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pop.framework; sourceTree = "<group>"; };
 		17D89698244C859400B0E68A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		17ECA9A124386CAF00A59C52 /* LYSwiftLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYSwiftLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17ECA9A424386CAF00A59C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CDEE0424911F6E0052928B /* pop.framework in Frameworks */,
 				2721E0A6B56CB8C92C368E8A /* Pods_LYSwiftLearn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +172,14 @@
 			path = Content;
 			sourceTree = "<group>";
 		};
+		17CDEE0124911EAD0052928B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				17CDEE0224911EAD0052928B /* pop.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 		17D89697244C855D00B0E68A /* PlayGround */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +213,7 @@
 		17ECA9A324386CAF00A59C52 /* LYSwiftLearn */ = {
 			isa = PBXGroup;
 			children = (
+				17CDEE0124911EAD0052928B /* Framework */,
 				17B16AA22490DE7F00E259F1 /* Main */,
 				17B16A9D2490A8E700E259F1 /* Base */,
 				17B16A9A24906DC200E259F1 /* Resource */,
@@ -255,6 +282,7 @@
 				17ECA99E24386CAF00A59C52 /* Frameworks */,
 				17ECA99F24386CAF00A59C52 /* Resources */,
 				DCF8AE407B1DDE88A83EE506 /* [CP] Embed Pods Frameworks */,
+				17CDEE0624911F6F0052928B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -698,6 +726,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = H7UCX23H4C;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LYSwiftLearn/Framework",
+				);
 				INFOPLIST_FILE = LYSwiftLearn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -723,6 +755,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = H7UCX23H4C;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LYSwiftLearn/Framework",
+				);
 				INFOPLIST_FILE = LYSwiftLearn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

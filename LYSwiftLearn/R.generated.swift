@@ -105,10 +105,14 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.image` struct is generated, and contains static references to 10 images.
+  /// This `R.image` struct is generated, and contains static references to 12 images.
   struct image {
     /// Image `back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "back")
+    /// Image `background_dark`.
+    static let background_dark = Rswift.ImageResource(bundle: R.hostingBundle, name: "background_dark")
+    /// Image `photo_verybig`.
+    static let photo_verybig = Rswift.ImageResource(bundle: R.hostingBundle, name: "photo_verybig")
     /// Image `tabbar_database`.
     static let tabbar_database = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_database")
     /// Image `tabbar_home_normal`.
@@ -132,6 +136,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "back", bundle: ..., traitCollection: ...)`
     static func back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.back, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "background_dark", bundle: ..., traitCollection: ...)`
+    static func background_dark(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.background_dark, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "photo_verybig", bundle: ..., traitCollection: ...)`
+    static func photo_verybig(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.photo_verybig, compatibleWith: traitCollection)
     }
     #endif
 

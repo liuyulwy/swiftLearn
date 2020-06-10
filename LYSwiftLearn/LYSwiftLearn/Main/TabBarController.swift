@@ -13,18 +13,19 @@ class TabBarController: ESTabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.isTranslucent = false
-        
+//        tabBar.isTranslucent = false
+        tabBar.shadowImage = UIImage.init()
+        tabBar.backgroundImage = UIImage(named: "background_dark")
         let v1 = ViewController()
         let v2 = ViewController()
         let v3 = ViewController()
         let v4 = ViewController()
         let v5 = ViewController()
-        v1.tabBarItem = ESTabBarItem.init(ExampleTipsBasicContentView(), title: "Home", image: R.image.tabbar_home_normal(), selectedImage: R.image.tabbar_home_selected())
-        v2.tabBarItem = ESTabBarItem.init(ExampleTipsBasicContentView(), title: "Find", image: R.image.tabbar_news_normal(), selectedImage: R.image.tabbar_news_selected())
-        v3.tabBarItem = ESTabBarItem.init(ExampleTipsBasicContentView(), title: "Photo", image: R.image.tabbar_database(), selectedImage: R.image.tabbar_database())
-        v4.tabBarItem = ESTabBarItem.init(ExampleTipsBasicContentView(), title: "Favor", image: R.image.tabbar_integral_normal(), selectedImage: R.image.tabbar_integral_selected())
-        v5.tabBarItem = ESTabBarItem.init(ExampleTipsContentView(), title: "Me", image: R.image.tabbar_news_normal(), selectedImage: R.image.tabbar_me_selected())
+        v1.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Home", image: R.image.tabbar_home_normal(), selectedImage: R.image.tabbar_home_selected())
+        v2.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Find", image: R.image.tabbar_news_normal(), selectedImage: R.image.tabbar_news_selected())
+        v3.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: R.image.tabbar_database(), selectedImage: R.image.tabbar_database())
+        v4.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Favor", image: R.image.tabbar_integral_normal(), selectedImage: R.image.tabbar_integral_selected())
+        v5.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Me", image: R.image.tabbar_news_normal(), selectedImage: R.image.tabbar_me_selected())
         
         let nav1 = BaseNavgationController.init(rootViewController: v1)
         let nav2 = BaseNavgationController.init(rootViewController: v2)
