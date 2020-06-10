@@ -3,18 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17B16A9C24906DF200E259F1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16A9B24906DF100E259F1 /* R.generated.swift */; };
+		17B16A9F2490A92100E259F1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16A9E2490A92100E259F1 /* BaseViewController.swift */; };
+		17B16AA12490A95B00E259F1 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AA02490A95B00E259F1 /* BaseNavgationController.swift */; };
+		17B16AA42490E21F00E259F1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AA32490E21F00E259F1 /* TabBarController.swift */; };
+		17B16AAD2490E41900E259F1 /* ExampleBackgroundContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AA62490E41900E259F1 /* ExampleBackgroundContentView.swift */; };
+		17B16AAE2490E41900E259F1 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AA72490E41900E259F1 /* ExampleBouncesContentView.swift */; };
+		17B16AAF2490E41900E259F1 /* ExampleAnimateTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AA82490E41900E259F1 /* ExampleAnimateTipsContentView.swift */; };
+		17B16AB02490E41900E259F1 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AA92490E41900E259F1 /* ExampleBasicContentView.swift */; };
+		17B16AB12490E41900E259F1 /* ExampleHighlightableContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AAA2490E41900E259F1 /* ExampleHighlightableContentView.swift */; };
+		17B16AB22490E41900E259F1 /* ExampleTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AAB2490E41900E259F1 /* ExampleTipsContentView.swift */; };
+		17B16AB32490E41900E259F1 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AAC2490E41900E259F1 /* ExampleIrregularityContentView.swift */; };
 		17ECA9A524386CAF00A59C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECA9A424386CAF00A59C52 /* AppDelegate.swift */; };
-		17ECA9A724386CAF00A59C52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECA9A624386CAF00A59C52 /* SceneDelegate.swift */; };
 		17ECA9A924386CAF00A59C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECA9A824386CAF00A59C52 /* ViewController.swift */; };
-		17ECA9AC24386CAF00A59C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ECA9AA24386CAF00A59C52 /* Main.storyboard */; };
 		17ECA9AE24386CB200A59C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17ECA9AD24386CB200A59C52 /* Assets.xcassets */; };
 		17ECA9B124386CB200A59C52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ECA9AF24386CB200A59C52 /* LaunchScreen.storyboard */; };
 		17ECA9BC24386CB300A59C52 /* LYSwiftLearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECA9BB24386CB300A59C52 /* LYSwiftLearnTests.swift */; };
 		17ECA9C724386CB300A59C52 /* LYSwiftLearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECA9C624386CB300A59C52 /* LYSwiftLearnUITests.swift */; };
+		17FDF4F0248E181300642055 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17FDF4F2248E181300642055 /* Localizable.strings */; };
 		2721E0A6B56CB8C92C368E8A /* Pods_LYSwiftLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4AFCCDD32E0D63E3C786B4 /* Pods_LYSwiftLearn.framework */; };
 		5CFDD56AAACB60DE5E098F2E /* Pods_LYSwiftLearnTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AFFACB731FCD4515C0D728 /* Pods_LYSwiftLearnTests.framework */; };
 		B277E0E6B45B1A95C6AEFC63 /* Pods_LYSwiftLearnUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BE5C68B9E051F3EB385CDB /* Pods_LYSwiftLearnUITests.framework */; };
@@ -39,12 +49,21 @@
 
 /* Begin PBXFileReference section */
 		0E5B2C1B4DC088ABCB31A129 /* Pods-LYSwiftLearnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSwiftLearnUITests.debug.xcconfig"; path = "Target Support Files/Pods-LYSwiftLearnUITests/Pods-LYSwiftLearnUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		17B16A9B24906DF100E259F1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		17B16A9E2490A92100E259F1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		17B16AA02490A95B00E259F1 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
+		17B16AA32490E21F00E259F1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		17B16AA62490E41900E259F1 /* ExampleBackgroundContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBackgroundContentView.swift; sourceTree = "<group>"; };
+		17B16AA72490E41900E259F1 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
+		17B16AA82490E41900E259F1 /* ExampleAnimateTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleAnimateTipsContentView.swift; sourceTree = "<group>"; };
+		17B16AA92490E41900E259F1 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
+		17B16AAA2490E41900E259F1 /* ExampleHighlightableContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleHighlightableContentView.swift; sourceTree = "<group>"; };
+		17B16AAB2490E41900E259F1 /* ExampleTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTipsContentView.swift; sourceTree = "<group>"; };
+		17B16AAC2490E41900E259F1 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
 		17D89698244C859400B0E68A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		17ECA9A124386CAF00A59C52 /* LYSwiftLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYSwiftLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17ECA9A424386CAF00A59C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17ECA9A624386CAF00A59C52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		17ECA9A824386CAF00A59C52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		17ECA9AB24386CAF00A59C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17ECA9AD24386CB200A59C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17ECA9B024386CB200A59C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17ECA9B224386CB200A59C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +73,9 @@
 		17ECA9C224386CB300A59C52 /* LYSwiftLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYSwiftLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17ECA9C624386CB300A59C52 /* LYSwiftLearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYSwiftLearnUITests.swift; sourceTree = "<group>"; };
 		17ECA9C824386CB300A59C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17FDF4ED248E176E00642055 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		17FDF4F1248E181300642055 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		17FDF4F3248E181700642055 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C26F3EB29A552D28FA013C5 /* Pods-LYSwiftLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSwiftLearn.release.xcconfig"; path = "Target Support Files/Pods-LYSwiftLearn/Pods-LYSwiftLearn.release.xcconfig"; sourceTree = "<group>"; };
 		586CEB84E9BCFB9E9EB90AC7 /* Pods-LYSwiftLearnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSwiftLearnTests.release.xcconfig"; path = "Target Support Files/Pods-LYSwiftLearnTests/Pods-LYSwiftLearnTests.release.xcconfig"; sourceTree = "<group>"; };
 		6709863E3D36FC744B8CEC0C /* Pods-LYSwiftLearnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSwiftLearnTests.debug.xcconfig"; path = "Target Support Files/Pods-LYSwiftLearnTests/Pods-LYSwiftLearnTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,19 +114,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B16A9A24906DC200E259F1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				17B16A9B24906DF100E259F1 /* R.generated.swift */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		17B16A9D2490A8E700E259F1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				17B16A9E2490A92100E259F1 /* BaseViewController.swift */,
+				17B16AA02490A95B00E259F1 /* BaseNavgationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		17B16AA22490DE7F00E259F1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				17B16AA52490E41900E259F1 /* Content */,
+				17B16AA32490E21F00E259F1 /* TabBarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		17B16AA52490E41900E259F1 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				17B16AA62490E41900E259F1 /* ExampleBackgroundContentView.swift */,
+				17B16AA72490E41900E259F1 /* ExampleBouncesContentView.swift */,
+				17B16AA82490E41900E259F1 /* ExampleAnimateTipsContentView.swift */,
+				17B16AA92490E41900E259F1 /* ExampleBasicContentView.swift */,
+				17B16AAA2490E41900E259F1 /* ExampleHighlightableContentView.swift */,
+				17B16AAB2490E41900E259F1 /* ExampleTipsContentView.swift */,
+				17B16AAC2490E41900E259F1 /* ExampleIrregularityContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		17D89697244C855D00B0E68A /* PlayGround */ = {
 			isa = PBXGroup;
 			children = (
 				17D89698244C859400B0E68A /* MyPlayground.playground */,
 			);
 			path = PlayGround;
-			sourceTree = "<group>";
-		};
-		17D9B2F22446E34C003AE340 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Root;
 			sourceTree = "<group>";
 		};
 		17ECA99824386CAF00A59C52 = {
@@ -132,15 +187,16 @@
 		17ECA9A324386CAF00A59C52 /* LYSwiftLearn */ = {
 			isa = PBXGroup;
 			children = (
+				17B16AA22490DE7F00E259F1 /* Main */,
+				17B16A9D2490A8E700E259F1 /* Base */,
+				17B16A9A24906DC200E259F1 /* Resource */,
 				17D89697244C855D00B0E68A /* PlayGround */,
-				17D9B2F22446E34C003AE340 /* Root */,
 				17ECA9A424386CAF00A59C52 /* AppDelegate.swift */,
-				17ECA9A624386CAF00A59C52 /* SceneDelegate.swift */,
 				17ECA9A824386CAF00A59C52 /* ViewController.swift */,
-				17ECA9AA24386CAF00A59C52 /* Main.storyboard */,
 				17ECA9AD24386CB200A59C52 /* Assets.xcassets */,
 				17ECA9AF24386CB200A59C52 /* LaunchScreen.storyboard */,
 				17ECA9B224386CB200A59C52 /* Info.plist */,
+				17FDF4F2248E181300642055 /* Localizable.strings */,
 			);
 			path = LYSwiftLearn;
 			sourceTree = "<group>";
@@ -194,6 +250,7 @@
 			buildConfigurationList = 17ECA9CB24386CB300A59C52 /* Build configuration list for PBXNativeTarget "LYSwiftLearn" */;
 			buildPhases = (
 				67F889C34E03F1C76059361D /* [CP] Check Pods Manifest.lock */,
+				17B16A9924906D0A00E259F1 /* ShellScript */,
 				17ECA99D24386CAF00A59C52 /* Sources */,
 				17ECA99E24386CAF00A59C52 /* Frameworks */,
 				17ECA99F24386CAF00A59C52 /* Resources */,
@@ -277,6 +334,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 17ECA99824386CAF00A59C52;
 			productRefGroup = 17ECA9A224386CAF00A59C52 /* Products */;
@@ -296,8 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17ECA9B124386CB200A59C52 /* LaunchScreen.storyboard in Resources */,
+				17FDF4F0248E181300642055 /* Localizable.strings in Resources */,
 				17ECA9AE24386CB200A59C52 /* Assets.xcassets in Resources */,
-				17ECA9AC24386CAF00A59C52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +376,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17B16A9924906D0A00E259F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		36CBF9E9F45AD7DE9C1EBBD9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,18 +467,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LYSwiftLearnTests/Pods-LYSwiftLearnTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LYSwiftLearnTests/Pods-LYSwiftLearnTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LYSwiftLearnTests/Pods-LYSwiftLearnTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -414,94 +484,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LYSwiftLearn/Pods-LYSwiftLearn-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/Dollar/Dollar.framework",
-				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
-				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
-				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
-				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Schedule/Schedule.framework",
-				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
-				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LYSwiftLearn/Pods-LYSwiftLearn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dollar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Schedule.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LYSwiftLearn/Pods-LYSwiftLearn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,9 +502,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B16A9F2490A92100E259F1 /* BaseViewController.swift in Sources */,
+				17B16AAE2490E41900E259F1 /* ExampleBouncesContentView.swift in Sources */,
+				17B16AB12490E41900E259F1 /* ExampleHighlightableContentView.swift in Sources */,
 				17ECA9A924386CAF00A59C52 /* ViewController.swift in Sources */,
 				17ECA9A524386CAF00A59C52 /* AppDelegate.swift in Sources */,
-				17ECA9A724386CAF00A59C52 /* SceneDelegate.swift in Sources */,
+				17B16AB22490E41900E259F1 /* ExampleTipsContentView.swift in Sources */,
+				17B16AB32490E41900E259F1 /* ExampleIrregularityContentView.swift in Sources */,
+				17B16AAD2490E41900E259F1 /* ExampleBackgroundContentView.swift in Sources */,
+				17B16AA42490E21F00E259F1 /* TabBarController.swift in Sources */,
+				17B16AAF2490E41900E259F1 /* ExampleAnimateTipsContentView.swift in Sources */,
+				17B16AA12490A95B00E259F1 /* BaseNavgationController.swift in Sources */,
+				17B16AB02490E41900E259F1 /* ExampleBasicContentView.swift in Sources */,
+				17B16A9C24906DF200E259F1 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,20 +550,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		17ECA9AA24386CAF00A59C52 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17ECA9AB24386CAF00A59C52 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		17ECA9AF24386CB200A59C52 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				17ECA9B024386CB200A59C52 /* Base */,
+				17FDF4ED248E176E00642055 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		17FDF4F2248E181300642055 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17FDF4F1248E181300642055 /* zh-Hans */,
+				17FDF4F3248E181700642055 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -576,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -636,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

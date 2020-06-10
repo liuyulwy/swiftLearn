@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LYSwiftLearn
+
+  Created by LY on 2020/6/8.
+  Copyright © 2020 liuyu. All rights reserved.
+*/
+
+"Hello world" = "你好世界";

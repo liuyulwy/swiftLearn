@@ -14,7 +14,7 @@ target 'LYSwiftLearn' do
 
   	pod 'ObjectMapper'	#解析 
   	pod 'SwiftyJSON'	#解析
-  	pod 'HandyJSON'	
+#  	pod 'HandyJSON'	
 
   	pod 'RxAlamofire'
   	pod 'RxDataSources'	#tableview conlletioniew 的代理
@@ -32,7 +32,7 @@ target 'LYSwiftLearn' do
 
   	pod 'SnapKit'	#布局
   	pod 'Hue'	#使用的是hex颜色值
-  	#pod 'R.swift'	#一种优雅安全的方式使用资源文件
+  	pod 'R.swift'	#一种优雅安全的方式使用资源文件
   	#pod 'SwiftGen' #资源文件
     pod 'DeviceKit'    #设备
     pod 'SwiftyStoreKit'  #内购
@@ -52,7 +52,8 @@ target 'LYSwiftLearn' do
     ##日志
     pod 'XCGLogger'
     pod 'SwiftLint'    #限定 Swift 样式和条例的工具
-    
+    # 国际化
+    pod 'Localize-Swift'
     
 #  	pod 'Hero' #是一个建立 iOS 视图控制器转换的库
 #  	pod 'SwiftDate'		#日期处理

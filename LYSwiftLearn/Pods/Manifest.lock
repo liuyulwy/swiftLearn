@@ -7,11 +7,11 @@ PODS:
   - Dollar (8.0.0)
   - ESTabBarController-swift (2.7)
   - FSPagerView (0.8.2)
-  - HandyJSON (5.0.0)
   - Hue (4.0.0)
   - IQKeyboardManagerSwift (6.3.0)
   - KeychainAccess (3.2.0)
   - Kingfisher (5.4.0)
+  - Localize-Swift (3.1.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
@@ -36,6 +36,9 @@ PODS:
     - PromiseKit/CorePromise
   - PryntTrimmerView (3.0.0)
   - Quick (2.1.0)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
   - RAMAnimatedTabBarController (5.0.0)
   - ReachabilitySwift (4.3.1)
   - ReactiveCocoa (10.0.0):
@@ -83,17 +86,18 @@ DEPENDENCIES:
   - Dollar
   - ESTabBarController-swift
   - FSPagerView
-  - HandyJSON
   - Hue
   - IQKeyboardManagerSwift
   - KeychainAccess
   - Kingfisher
+  - Localize-Swift
   - Moya
   - Nimble
   - NVActivityIndicatorView
   - ObjectMapper
   - PromiseKit
   - Quick
+  - R.swift
   - RAMAnimatedTabBarController
   - ReachabilitySwift
   - ReactiveCocoa
@@ -114,7 +118,7 @@ DEPENDENCIES:
   - YPImagePicker
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - AsyncSwift
     - CryptoSwift
@@ -123,11 +127,11 @@ SPEC REPOS:
     - Dollar
     - ESTabBarController-swift
     - FSPagerView
-    - HandyJSON
     - Hue
     - IQKeyboardManagerSwift
     - KeychainAccess
     - Kingfisher
+    - Localize-Swift
     - Moya
     - Nimble
     - NVActivityIndicatorView
@@ -136,6 +140,8 @@ SPEC REPOS:
     - PromiseKit
     - PryntTrimmerView
     - Quick
+    - R.swift
+    - R.swift.Library
     - RAMAnimatedTabBarController
     - ReachabilitySwift
     - ReactiveCocoa
@@ -168,11 +174,11 @@ SPEC CHECKSUMS:
   Dollar: 82581ff2e4e80b26ba11fad5ac7e638892522ca5
   ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
-  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   Hue: afe18b4e819e2848e7d2d5b4b33f4d3f88dd921b
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
@@ -181,6 +187,8 @@ SPEC CHECKSUMS:
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RAMAnimatedTabBarController: 6736db7bec2ec74d64059ee9cb40cb9bd281338e
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   ReactiveCocoa: 6d4c37ba236f5d9a7a55b2172cd09f19ba85f574
@@ -204,6 +212,6 @@ SPEC CHECKSUMS:
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
   YPImagePicker: 8039f89ad79281545fa868486f32d9bf5d65ede1
 
-PODFILE CHECKSUM: 52fc45c712131109ca280a879d1cfb097e0b2467
+PODFILE CHECKSUM: fa3b8f52657b783559154b5c984d25570913b6fc
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.1
