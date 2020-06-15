@@ -105,8 +105,10 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.image` struct is generated, and contains static references to 12 images.
+  /// This `R.image` struct is generated, and contains static references to 13 images.
   struct image {
+    /// Image `Transparent`.
+    static let transparent = Rswift.ImageResource(bundle: R.hostingBundle, name: "Transparent")
     /// Image `back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "back")
     /// Image `background_dark`.
@@ -131,6 +133,13 @@ struct R: Rswift.Validatable {
     static let tabbar_news_normal = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_news_normal")
     /// Image `tabbar_news_selected`.
     static let tabbar_news_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_news_selected")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Transparent", bundle: ..., traitCollection: ...)`
+    static func transparent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.transparent, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "back", bundle: ..., traitCollection: ...)`
