@@ -29,6 +29,7 @@ target 'LYSwiftLearn' do
   	pod 'Schedule'		#
   	pod 'Swinject'		#依赖注入工具
 
+    pod 'SwifterSwift' #扩展
 
   	pod 'SnapKit'	#布局
   	pod 'Hue'	#使用的是hex颜色值

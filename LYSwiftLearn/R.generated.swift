@@ -105,7 +105,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.image` struct is generated, and contains static references to 13 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
     /// Image `Transparent`.
     static let transparent = Rswift.ImageResource(bundle: R.hostingBundle, name: "Transparent")
@@ -129,10 +129,14 @@ struct R: Rswift.Validatable {
     static let tabbar_me_normal = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_me_normal")
     /// Image `tabbar_me_selected`.
     static let tabbar_me_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_me_selected")
+    /// Image `tabbar_navbar`.
+    static let tabbar_navbar = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_navbar")
     /// Image `tabbar_news_normal`.
     static let tabbar_news_normal = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_news_normal")
     /// Image `tabbar_news_selected`.
     static let tabbar_news_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "tabbar_news_selected")
+    /// Image `tapbar_top_line`.
+    static let tapbar_top_line = Rswift.ImageResource(bundle: R.hostingBundle, name: "tapbar_top_line")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Transparent", bundle: ..., traitCollection: ...)`
@@ -212,6 +216,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tabbar_navbar", bundle: ..., traitCollection: ...)`
+    static func tabbar_navbar(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tabbar_navbar, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "tabbar_news_normal", bundle: ..., traitCollection: ...)`
     static func tabbar_news_normal(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.tabbar_news_normal, compatibleWith: traitCollection)
@@ -222,6 +233,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "tabbar_news_selected", bundle: ..., traitCollection: ...)`
     static func tabbar_news_selected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.tabbar_news_selected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tapbar_top_line", bundle: ..., traitCollection: ...)`
+    static func tapbar_top_line(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tapbar_top_line, compatibleWith: traitCollection)
     }
     #endif
 

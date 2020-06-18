@@ -65,6 +65,31 @@ PODS:
   - SkeletonView (1.5)
   - SnapKit (5.0.0)
   - SteviaLayout (4.4.4)
+  - SwifterSwift (5.2.0):
+    - SwifterSwift/AppKit (= 5.2.0)
+    - SwifterSwift/CoreAnimation (= 5.2.0)
+    - SwifterSwift/CoreGraphics (= 5.2.0)
+    - SwifterSwift/CoreLocation (= 5.2.0)
+    - SwifterSwift/Dispatch (= 5.2.0)
+    - SwifterSwift/Foundation (= 5.2.0)
+    - SwifterSwift/MapKit (= 5.2.0)
+    - SwifterSwift/SceneKit (= 5.2.0)
+    - SwifterSwift/SpriteKit (= 5.2.0)
+    - SwifterSwift/StoreKit (= 5.2.0)
+    - SwifterSwift/SwiftStdlib (= 5.2.0)
+    - SwifterSwift/UIKit (= 5.2.0)
+  - SwifterSwift/AppKit (5.2.0)
+  - SwifterSwift/CoreAnimation (5.2.0)
+  - SwifterSwift/CoreGraphics (5.2.0)
+  - SwifterSwift/CoreLocation (5.2.0)
+  - SwifterSwift/Dispatch (5.2.0)
+  - SwifterSwift/Foundation (5.2.0)
+  - SwifterSwift/MapKit (5.2.0)
+  - SwifterSwift/SceneKit (5.2.0)
+  - SwifterSwift/SpriteKit (5.2.0)
+  - SwifterSwift/StoreKit (5.2.0)
+  - SwifterSwift/SwiftStdlib (5.2.0)
+  - SwifterSwift/UIKit (5.2.0)
   - SwiftLint (0.32.0)
   - SwiftyJSON (5.0.0)
   - SwiftyStoreKit (0.15.0)
@@ -109,6 +134,7 @@ DEPENDENCIES:
   - Schedule
   - SkeletonView
   - SnapKit
+  - SwifterSwift
   - SwiftLint
   - SwiftyJSON
   - SwiftyStoreKit
@@ -157,6 +183,7 @@ SPEC REPOS:
     - SkeletonView
     - SnapKit
     - SteviaLayout
+    - SwifterSwift
     - SwiftLint
     - SwiftyJSON
     - SwiftyStoreKit
@@ -204,6 +231,7 @@ SPEC CHECKSUMS:
   SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SteviaLayout: 523469269059f2c6da02820bb2ff28a5fe0780aa
+  SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
@@ -212,6 +240,6 @@ SPEC CHECKSUMS:
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
   YPImagePicker: 8039f89ad79281545fa868486f32d9bf5d65ede1
 
-PODFILE CHECKSUM: fa3b8f52657b783559154b5c984d25570913b6fc
+PODFILE CHECKSUM: 99354686112e3b82f97e96cd34a59a2cee2c5810
 
 COCOAPODS: 1.9.1
