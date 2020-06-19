@@ -18,7 +18,7 @@ class HomeViewController: BaseViewController {
        view.backgroundColor = .white
         
         let view = UIView.init()
-        view.backgroundColor = UIColor.blue
+//        view.backgroundColor = UIColor.blue
         view.frame = CGRect.init(x: 0, y: 0, width: 200, height: 200)
         self.view.addSubview(view)
         
@@ -30,6 +30,18 @@ class HomeViewController: BaseViewController {
             }
             make.size.equalTo(CGSize.init(width: 200, height: 200))
         }
+        
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.frame
+        gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
+        view.layer.addSublayer(gradientLayer)
+        
+        
+        
         
         let view1 = UIView.init()
         view1.backgroundColor = UIColor.blue

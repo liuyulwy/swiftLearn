@@ -12,7 +12,6 @@ class BaseNavgationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

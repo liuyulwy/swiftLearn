@@ -8,7 +8,7 @@
 
 import UIKit
 import ESTabBarController_swift
-
+import SwifterSwift
 class TabBarController: ESTabBarController {
     
     override func viewDidLoad() {
@@ -49,11 +49,37 @@ class TabBarController: ESTabBarController {
         navAppearance.backgroundColor = .white
         navAppearance.barTintColor = .white
         navAppearance.shadowImage = R.image.transparent()
+        navAppearance.setBackgroundImage(navBackgroundImage().withRenderingMode(.alwaysOriginal), for: .default)
+//        navAppearance.tintColor = .white
         navAppearance.isTranslucent = false
-        navAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
+        navAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
+        navAppearance.backIndicatorImage = R.image.back()?.withRenderingMode(.alwaysOriginal)
+        navAppearance.backIndicatorTransitionMaskImage = R.image.back()?.withRenderingMode(.alwaysOriginal)
         
         let itemAppearance = UIBarButtonItem.appearance()
         itemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .normal)
+        
+    }
+    
+    func navBackgroundImage() -> UIImage {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect.init(x: 0, y: 0, width: view.frame.size.width, height: 10)
+        gradientLayer.colors = [UIColor.init(hexString: "#3A57ED")!.cgColor, UIColor.init(hexString: "#5332DB")!.cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        view.layer.addSublayer(gradientLayer)
+        
+        UIGraphicsBeginImageContext(gradientLayer.frame.size)
+
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+
+        let outputImage = UIGraphicsGetImageFromCurrentImageContext()
+
+        UIGraphicsEndImageContext()
+
+        return outputImage!
+
     }
     
 }

@@ -9,8 +9,6 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    //是否添加返回按钮
-    var automaticallyAdjustsLeftBarButtonItem: Bool = true
     
     //导航标题
     var navigationTitle = "" {
@@ -20,59 +18,35 @@ class BaseViewController: UIViewController {
     }
     // 返回按钮
     lazy var backBarButton: UIBarButtonItem = {
-        let item = UIBarButtonItem.init(title: "返回", style: .done, target: self, action: #selector(backAction))
+        let item = UIBarButtonItem.init(title: "", style: .done, target: nil, action: nil)
         return item
     }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        if #available(iOS 11.0, *) {
-            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
-        } else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
-        
         makeUI()
         bindViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if automaticallyAdjustsLeftBarButtonItem {
-            adjustLeftBarButtonItem()
-        }
     }
     
     func makeUI() {
-        
+        if #available(iOS 11.0, *) {
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
+        view.backgroundColor = .white
+        navigationItem.backBarButtonItem = backBarButton
     }
     
     func bindViewModel() {
-        
-    }
-    
-    func adjustLeftBarButtonItem() {
-        if self.navigationController?.viewControllers.count ?? 0 > 1 {
-            navigationItem.leftBarButtonItem = backBarButton
-        }else {
-            navigationItem.leftBarButtonItem = nil
-        }
-    }
-    
-    @objc func backAction() {
-        let count = self.navigationController?.viewControllers.count ?? 0
-        if count > 1 {
-            navigationController?.popViewController(animated: true)
-        }else{
-            if presentingViewController != nil {
-                dismiss(animated: true, completion: nil)
-            }
-        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        return .lightContent
     }
 }
