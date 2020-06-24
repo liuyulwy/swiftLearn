@@ -14,7 +14,7 @@ import XCGLogger
 
 class HomeViewController: BaseViewController {
     
-    
+    let disposeBag = DisposeBag.init()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -72,20 +72,25 @@ class HomeViewController: BaseViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //        let news = MeViewController.init()
         //        navigationController?.pushViewController(news, animated: true)
-        
-        provider.request(.playlist("152")) { result in
-            switch result {
-            case let .success(response):
-                let statusCode = response.statusCode // 响应状态码：200, 401, 500...
-                let data = response.data // 响应数据
-                log.debug("statusCode:\(statusCode)==\(data)")
-                case let .failure(error):
-                    log.debug(error)
-                break
-                
-            }
-            
-        }
+        provider.rx.request(.playlist("152")).subscribe(onSuccess: { (respose) in
+            let json = try? respose.mapJSON()
+//            log.debug(json)
+        }) { (err) in
+//            log.debug(err)
+            }.disposed(by: disposeBag)
+//        provider.request(.playlist("152")) { result in
+//            switch result {
+//            case let .success(response):
+//                let statusCode = response.statusCode // 响应状态码：200, 401, 500...
+//                let data = response.data // 响应数据
+//                log.debug("statusCode:\(statusCode)==\(data)")
+//                case let .failure(error):
+//                    log.debug(error)
+//                break
+//
+//            }
+//
+//        }
     }
     
 }

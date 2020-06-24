@@ -15,6 +15,9 @@
 		172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172670742491EEB8000387FA /* TabbarItemContentView.swift */; };
 		175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E95A124A1F41B00F6BC67 /* LYApi.swift */; };
 		177685E0249CF48D00F3B1E0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177685DF249CF48D00F3B1E0 /* Constant.swift */; };
+		17A2320524A2F0B600D1BE34 /* Observable+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2320224A2F0B600D1BE34 /* Observable+Response.swift */; };
+		17A2320624A2F0B600D1BE34 /* MoyaProvider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2320324A2F0B600D1BE34 /* MoyaProvider+Rx.swift */; };
+		17A2320724A2F0B600D1BE34 /* Single+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2320424A2F0B600D1BE34 /* Single+Response.swift */; };
 		17B16A9C24906DF200E259F1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16A9B24906DF100E259F1 /* R.generated.swift */; };
 		17B16A9F2490A92100E259F1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16A9E2490A92100E259F1 /* BaseViewController.swift */; };
 		17B16AA12490A95B00E259F1 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AA02490A95B00E259F1 /* BaseNavgationController.swift */; };
@@ -73,6 +76,9 @@
 		172670742491EEB8000387FA /* TabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItemContentView.swift; sourceTree = "<group>"; };
 		175E95A124A1F41B00F6BC67 /* LYApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYApi.swift; sourceTree = "<group>"; };
 		177685DF249CF48D00F3B1E0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		17A2320224A2F0B600D1BE34 /* Observable+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Response.swift"; sourceTree = "<group>"; };
+		17A2320324A2F0B600D1BE34 /* MoyaProvider+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Rx.swift"; sourceTree = "<group>"; };
+		17A2320424A2F0B600D1BE34 /* Single+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+Response.swift"; sourceTree = "<group>"; };
 		17B16A9B24906DF100E259F1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		17B16A9E2490A92100E259F1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		17B16AA02490A95B00E259F1 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
@@ -192,6 +198,16 @@
 			path = NetWork;
 			sourceTree = "<group>";
 		};
+		17A2320124A2F0B600D1BE34 /* RxMoya */ = {
+			isa = PBXGroup;
+			children = (
+				17A2320224A2F0B600D1BE34 /* Observable+Response.swift */,
+				17A2320324A2F0B600D1BE34 /* MoyaProvider+Rx.swift */,
+				17A2320424A2F0B600D1BE34 /* Single+Response.swift */,
+			);
+			path = RxMoya;
+			sourceTree = "<group>";
+		};
 		17B16A9A24906DC200E259F1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +245,7 @@
 		17CDEE0124911EAD0052928B /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				17A2320124A2F0B600D1BE34 /* RxMoya */,
 				17CDEE0224911EAD0052928B /* pop.framework */,
 			);
 			path = Framework;
@@ -591,13 +608,16 @@
 				1717AA4C249A05E8000851B6 /* IntegralViewController.swift in Sources */,
 				1717AA4A249A05DA000851B6 /* DataBaseViewController.swift in Sources */,
 				175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */,
+				17A2320524A2F0B600D1BE34 /* Observable+Response.swift in Sources */,
 				1717AA46249A05BE000851B6 /* HomeViewController.swift in Sources */,
 				1717AA4E249A05F3000851B6 /* MeViewController.swift in Sources */,
 				17B16AA42490E21F00E259F1 /* TabBarController.swift in Sources */,
 				17B16AA12490A95B00E259F1 /* BaseNavgationController.swift in Sources */,
 				1717AA48249A05CD000851B6 /* NewsViewController.swift in Sources */,
 				172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */,
+				17A2320724A2F0B600D1BE34 /* Single+Response.swift in Sources */,
 				17B16A9C24906DF200E259F1 /* R.generated.swift in Sources */,
+				17A2320624A2F0B600D1BE34 /* MoyaProvider+Rx.swift in Sources */,
 				177685E0249CF48D00F3B1E0 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
