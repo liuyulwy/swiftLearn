@@ -70,14 +70,16 @@ class HomeViewController: BaseViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    
         //        let news = MeViewController.init()
         //        navigationController?.pushViewController(news, animated: true)
-        provider.rx.request(.playlist("152")).subscribe(onSuccess: { (respose) in
-            let json = try? respose.mapJSON()
-//            log.debug(json)
-        }) { (err) in
-//            log.debug(err)
-            }.disposed(by: disposeBag)
+//        provider.rx.request(.playlist("152")).subscribe(onSuccess: { (respose) in
+//            let json = try? respose.mapJSON()
+////            log.debug(json)
+//        }) { (err) in
+////            log.debug(err)
+//            }.disposed(by: disposeBag)
 //        provider.request(.playlist("152")) { result in
 //            switch result {
 //            case let .success(response):

@@ -24,6 +24,10 @@
 		17B16AA42490E21F00E259F1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16AA32490E21F00E259F1 /* TabBarController.swift */; };
 		17CDEE0424911F6E0052928B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CDEE0224911EAD0052928B /* pop.framework */; };
 		17CDEE0524911F6E0052928B /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17CDEE0224911EAD0052928B /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17DF8AED24A8236A0098DCDE /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF8AEC24A8236A0098DCDE /* NetWork.swift */; };
+		17DF8B1024A86DCF0098DCDE /* MyServerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF8B0F24A86DCF0098DCDE /* MyServerType.swift */; };
+		17DF8B1224A86EAF0098DCDE /* MyServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF8B1124A86EAF0098DCDE /* MyServerConfig.swift */; };
+		17DF8B1424A872CE0098DCDE /* MyServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF8B1324A872CE0098DCDE /* MyServerApi.swift */; };
 		17ECA9A524386CAF00A59C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECA9A424386CAF00A59C52 /* AppDelegate.swift */; };
 		17ECA9AE24386CB200A59C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17ECA9AD24386CB200A59C52 /* Assets.xcassets */; };
 		17ECA9B124386CB200A59C52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ECA9AF24386CB200A59C52 /* LaunchScreen.storyboard */; };
@@ -85,6 +89,10 @@
 		17B16AA32490E21F00E259F1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		17CDEE0224911EAD0052928B /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pop.framework; sourceTree = "<group>"; };
 		17D89698244C859400B0E68A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		17DF8AEC24A8236A0098DCDE /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
+		17DF8B0F24A86DCF0098DCDE /* MyServerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServerType.swift; sourceTree = "<group>"; };
+		17DF8B1124A86EAF0098DCDE /* MyServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServerConfig.swift; sourceTree = "<group>"; };
+		17DF8B1324A872CE0098DCDE /* MyServerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServerApi.swift; sourceTree = "<group>"; };
 		17ECA9A124386CAF00A59C52 /* LYSwiftLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYSwiftLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17ECA9A424386CAF00A59C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17ECA9AD24386CB200A59C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,6 +202,10 @@
 			isa = PBXGroup;
 			children = (
 				175E95A124A1F41B00F6BC67 /* LYApi.swift */,
+				17DF8AEC24A8236A0098DCDE /* NetWork.swift */,
+				17DF8B0F24A86DCF0098DCDE /* MyServerType.swift */,
+				17DF8B1124A86EAF0098DCDE /* MyServerConfig.swift */,
+				17DF8B1324A872CE0098DCDE /* MyServerApi.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -610,11 +622,15 @@
 				175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */,
 				17A2320524A2F0B600D1BE34 /* Observable+Response.swift in Sources */,
 				1717AA46249A05BE000851B6 /* HomeViewController.swift in Sources */,
+				17DF8B1424A872CE0098DCDE /* MyServerApi.swift in Sources */,
 				1717AA4E249A05F3000851B6 /* MeViewController.swift in Sources */,
 				17B16AA42490E21F00E259F1 /* TabBarController.swift in Sources */,
+				17DF8B1224A86EAF0098DCDE /* MyServerConfig.swift in Sources */,
 				17B16AA12490A95B00E259F1 /* BaseNavgationController.swift in Sources */,
 				1717AA48249A05CD000851B6 /* NewsViewController.swift in Sources */,
 				172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */,
+				17DF8B1024A86DCF0098DCDE /* MyServerType.swift in Sources */,
+				17DF8AED24A8236A0098DCDE /* NetWork.swift in Sources */,
 				17A2320724A2F0B600D1BE34 /* Single+Response.swift in Sources */,
 				17B16A9C24906DF200E259F1 /* R.generated.swift in Sources */,
 				17A2320624A2F0B600D1BE34 /* MoyaProvider+Rx.swift in Sources */,
