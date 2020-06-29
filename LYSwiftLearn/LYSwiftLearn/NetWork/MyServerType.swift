@@ -10,14 +10,15 @@ import Foundation
 import Moya
 
 public protocol MyServerType: Moya.TargetType {
-   var isShowLoading: Bool { get }
-   var parameters: [String: Any]? { get }
+    var isShowLoading: Bool { get }
+    var parameters: [String: Any]? { get }
+    var route: Route { get }
 }
 
 extension MyServerType {
     //服务器地址
     public var baseURL: URL {
-        return URL.init(string: MyServerConfig.shared.rootUrl)!
+        return URL.init(string: MyServerConfig.shared.baseUrl)!
     }
     
     //请求头

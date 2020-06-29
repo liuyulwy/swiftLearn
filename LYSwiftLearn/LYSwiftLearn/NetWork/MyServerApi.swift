@@ -8,6 +8,9 @@
 
 import Foundation
 import Moya
+
+let serverApi = Networking<MyServerApi>.init()
+
 enum MyServerApi {
     case mockResponse
     case userProfile(String)
@@ -16,6 +19,19 @@ enum MyServerApi {
 
 extension MyServerApi: MyServerType {
     
+    public var method: Moya.Method {
+        return self.route.method
+    }
+    //配置路由
+    public var route: Route {
+        switch self {
+        case .userProfile(_):
+            return .get("path")
+        default: break
+            
+        }
+        return .get("path")
+    }
     //设置参数
     public var parameters: [String : Any]? {
         var tempParameters: [String : Any] = [:]

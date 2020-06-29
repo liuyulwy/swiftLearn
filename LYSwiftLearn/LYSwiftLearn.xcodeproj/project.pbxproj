@@ -12,6 +12,7 @@
 		1717AA4A249A05DA000851B6 /* DataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717AA49249A05DA000851B6 /* DataBaseViewController.swift */; };
 		1717AA4C249A05E8000851B6 /* IntegralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717AA4B249A05E7000851B6 /* IntegralViewController.swift */; };
 		1717AA4E249A05F3000851B6 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717AA4D249A05F3000851B6 /* MeViewController.swift */; };
+		1717D8EA24A9C2B70096C1D1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717D8E924A9C2B70096C1D1 /* Route.swift */; };
 		172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172670742491EEB8000387FA /* TabbarItemContentView.swift */; };
 		175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E95A124A1F41B00F6BC67 /* LYApi.swift */; };
 		177685E0249CF48D00F3B1E0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177685DF249CF48D00F3B1E0 /* Constant.swift */; };
@@ -77,6 +78,7 @@
 		1717AA49249A05DA000851B6 /* DataBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseViewController.swift; sourceTree = "<group>"; };
 		1717AA4B249A05E7000851B6 /* IntegralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegralViewController.swift; sourceTree = "<group>"; };
 		1717AA4D249A05F3000851B6 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		1717D8E924A9C2B70096C1D1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		172670742491EEB8000387FA /* TabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItemContentView.swift; sourceTree = "<group>"; };
 		175E95A124A1F41B00F6BC67 /* LYApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYApi.swift; sourceTree = "<group>"; };
 		177685DF249CF48D00F3B1E0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				17DF8B0F24A86DCF0098DCDE /* MyServerType.swift */,
 				17DF8B1124A86EAF0098DCDE /* MyServerConfig.swift */,
 				17DF8B1324A872CE0098DCDE /* MyServerApi.swift */,
+				1717D8E924A9C2B70096C1D1 /* Route.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				17B16AA42490E21F00E259F1 /* TabBarController.swift in Sources */,
 				17DF8B1224A86EAF0098DCDE /* MyServerConfig.swift in Sources */,
 				17B16AA12490A95B00E259F1 /* BaseNavgationController.swift in Sources */,
+				1717D8EA24A9C2B70096C1D1 /* Route.swift in Sources */,
 				1717AA48249A05CD000851B6 /* NewsViewController.swift in Sources */,
 				172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */,
 				17DF8B1024A86DCF0098DCDE /* MyServerType.swift in Sources */,

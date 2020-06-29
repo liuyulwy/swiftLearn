@@ -9,7 +9,7 @@
 import Foundation
 
 public struct MyServerConfig {
-    var rootUrl: String = "https://api.github.com"
+    var baseUrl: String = "https://api.github.com"
     var headers: [String: String]? = defaultHeaders()
     var parameters: [String: Any]? = defaultParameters()
     var timeoutInterval: Double = 15.0
