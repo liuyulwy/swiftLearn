@@ -85,6 +85,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainController = TabBarController()
         window?.rootViewController = mainController
         window?.makeKeyAndVisible()
+        
+        NetworkStatusManager.shared.startNetworkReachabilityObserver()
+       
         return true
     }
 }

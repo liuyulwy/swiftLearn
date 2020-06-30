@@ -30,7 +30,7 @@ extension MyServerApi: MyServerType {
         default: break
             
         }
-        return .get("path")
+        return .get("/path")
     }
     //设置参数
     public var parameters: [String : Any]? {

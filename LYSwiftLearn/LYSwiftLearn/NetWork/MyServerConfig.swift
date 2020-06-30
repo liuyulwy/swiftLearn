@@ -7,9 +7,9 @@
 //
 
 import Foundation
-
+import UIKit
 public struct MyServerConfig {
-    var baseUrl: String = "https://api.github.com"
+    var baseUrl: String = "https://appapi-dev.yaozh.com/"
     var headers: [String: String]? = defaultHeaders()
     var parameters: [String: Any]? = defaultParameters()
     var timeoutInterval: Double = 15.0
@@ -24,8 +24,23 @@ public struct MyServerConfig {
     }
     
     static func defaultParameters() -> [String : Any]? {
-        return ["platform" : "ios",
-                "version" : "1.2.3",
-        ]
+        
+        var parameters = [String : Any]()
+        parameters["client"] = "iOS"
+        parameters["timeStamp"] = String(Date().unixTimestamp.int)
+        parameters["version"] = UIApplication.shared.version
+        parameters["randStr"] = UUID().uuidString
+        return parameters
     }
 }
+//NSString *timeStamp = [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]];
+//NSString *randStr = [self stringWithUUID];
+//NSString *signature = [[self class] yz_signatureWithTimeStamp:timeStamp randStr:randStr];
+//NSString *netIP = [PhoneIP deviceIP];
+//NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
+//[mDic setObject:timeStamp forKey:@"timeStamp"];
+//[mDic setObject:randStr forKey:@"randStr"];
+//[mDic setObject:signature forKey:@"signature"];
+//[mDic setObject:netIP forKey:@"ip"];
+//[mDic setObject:@"iOS" forKey:@"client"];
+//[mDic setObject:kApplication.appVersion forKey:@"version"];

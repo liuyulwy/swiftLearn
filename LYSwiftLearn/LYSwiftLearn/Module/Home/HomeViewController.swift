@@ -73,7 +73,20 @@ class HomeViewController: BaseViewController {
 
         //        let news = MeViewController.init()
         //        navigationController?.pushViewController(news, animated: true)
+//        serverApi.provider.rx.request(.mockResponse).asObservable().mapModel(Model.self).subscribe(onNext: { (model) in
+//            print(model)
+//        }, onError: { (err) in
+//            print(err)
+//            }).dispose()
+        
+        print(wifiIP as Any)
+        print(deviceIP as Any)
         
     }
     
 }
+
+//struct Model: HandyJSON {
+//    var id = 0
+//    
+//}
