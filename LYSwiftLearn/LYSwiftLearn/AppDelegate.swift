@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainController
         window?.makeKeyAndVisible()
         
-        NetworkStatusManager.shared.startNetworkReachabilityObserver()
+        NetworkStatusManager.sharedManager.startNetworkReachabilityObserver()
        
         return true
     }

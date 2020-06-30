@@ -79,10 +79,16 @@ class HomeViewController: BaseViewController {
 //            print(err)
 //            }).dispose()
         
-        print(wifiIP as Any)
-        print(deviceIP as Any)
-        
+        if NetworkStatusManager.sharedManager.isReachableOnWiFi {
+            print(wifiIP as Any)
+            
+        }else {
+            print(deviceIP as Any)
+        }
+
     }
+    
+    
     
 }
 

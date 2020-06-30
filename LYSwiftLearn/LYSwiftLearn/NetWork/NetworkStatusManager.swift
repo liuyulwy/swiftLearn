@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 class NetworkStatusManager {
-    static let shared = NetworkStatusManager()
+    static let sharedManager = NetworkStatusManager()
     private init() {}
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: MyServerConfig.shared.baseUrl)
     var isReachable: Bool { return reachabilityManager?.isReachable ?? false }

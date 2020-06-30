@@ -65,12 +65,12 @@ var wifiIP:String?{
     }
      
     freeifaddrs(ifaddr)
-    print("wifi:\(address)")
+    print("wifi:\(address ?? "000000")")
     return address
 }
 
 func getIP() -> String?{
-    if NetworkStatusManager.shared.isReachableOnWiFi {
+    if NetworkStatusManager.sharedManager.isReachableOnWiFi {
         return wifiIP
     }
     return deviceIP

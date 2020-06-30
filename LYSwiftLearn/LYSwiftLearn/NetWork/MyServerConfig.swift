@@ -18,29 +18,29 @@ public struct MyServerConfig {
     private init() {}
     
     static func defaultHeaders() -> [String : String]? {
-        return ["deviceID" : "qwertyyu1234545",
-                "Authorization": "tyirhjkkokjjjbggstvj"
-        ]
+        return nil
     }
     
     static func defaultParameters() -> [String : Any]? {
         
         var parameters = [String : Any]()
+        
+        let timeStamp = String(Date().unixTimestamp.int)
         parameters["client"] = "iOS"
-        parameters["timeStamp"] = String(Date().unixTimestamp.int)
+        parameters["timeStamp"] = timeStamp
         parameters["version"] = UIApplication.shared.version
         parameters["randStr"] = UUID().uuidString
+        parameters["ip"] = getIP() ?? ""
+        parameters["signature"] = signature(timeStamp: timeStamp,randStr: UUID().uuidString)
         return parameters
     }
+    
+    private static func signature(timeStamp:String, randStr:String) -> String {
+        var array = [timeStamp, randStr, "newdb"]
+        array = array.sorted { (a, b) -> Bool in
+            return a.localizedStandardCompare(b) == .orderedAscending
+        }
+        return array.joined()
+    }
 }
-//NSString *timeStamp = [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]];
-//NSString *randStr = [self stringWithUUID];
-//NSString *signature = [[self class] yz_signatureWithTimeStamp:timeStamp randStr:randStr];
-//NSString *netIP = [PhoneIP deviceIP];
-//NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
-//[mDic setObject:timeStamp forKey:@"timeStamp"];
-//[mDic setObject:randStr forKey:@"randStr"];
-//[mDic setObject:signature forKey:@"signature"];
-//[mDic setObject:netIP forKey:@"ip"];
-//[mDic setObject:@"iOS" forKey:@"client"];
-//[mDic setObject:kApplication.appVersion forKey:@"version"];
+
