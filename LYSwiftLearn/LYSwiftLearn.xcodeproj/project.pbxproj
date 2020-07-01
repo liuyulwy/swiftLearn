@@ -15,6 +15,7 @@
 		1717D8EA24A9C2B70096C1D1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717D8E924A9C2B70096C1D1 /* Route.swift */; };
 		172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172670742491EEB8000387FA /* TabbarItemContentView.swift */; };
 		175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E95A124A1F41B00F6BC67 /* LYApi.swift */; };
+		1773342324AC5A070086303C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773342224AC5A070086303C /* Model.swift */; };
 		177685E0249CF48D00F3B1E0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177685DF249CF48D00F3B1E0 /* Constant.swift */; };
 		17A2320524A2F0B600D1BE34 /* Observable+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2320224A2F0B600D1BE34 /* Observable+Response.swift */; };
 		17A2320624A2F0B600D1BE34 /* MoyaProvider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2320324A2F0B600D1BE34 /* MoyaProvider+Rx.swift */; };
@@ -124,6 +125,7 @@
 		1717D8E924A9C2B70096C1D1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		172670742491EEB8000387FA /* TabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItemContentView.swift; sourceTree = "<group>"; };
 		175E95A124A1F41B00F6BC67 /* LYApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYApi.swift; sourceTree = "<group>"; };
+		1773342224AC5A070086303C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		177685DF249CF48D00F3B1E0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		17A2320224A2F0B600D1BE34 /* Observable+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Response.swift"; sourceTree = "<group>"; };
 		17A2320324A2F0B600D1BE34 /* MoyaProvider+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Rx.swift"; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				1717D8E924A9C2B70096C1D1 /* Route.swift */,
 				17DA695824AB0BDA00BC5541 /* NetworkStatusManager.swift */,
 				17DA695A24AB344300BC5541 /* Device.swift */,
+				1773342224AC5A070086303C /* Model.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -824,6 +827,7 @@
 				17DA694124AB083700BC5541 /* HelpingMapper.swift in Sources */,
 				17DA694F24AB083700BC5541 /* ExtendCustomBasicType.swift in Sources */,
 				17DA694924AB083700BC5541 /* OtherExtension.swift in Sources */,
+				1773342324AC5A070086303C /* Model.swift in Sources */,
 				17DA693024AB083700BC5541 /* NSDecimalNumberTransform.swift in Sources */,
 				17DA692A24AB083700BC5541 /* Configuration.swift in Sources */,
 				17DA693B24AB083700BC5541 /* DateTransform.swift in Sources */,
@@ -1031,6 +1035,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaozh.learns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1061,6 +1066,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaozh.learns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

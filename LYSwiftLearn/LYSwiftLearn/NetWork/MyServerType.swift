@@ -19,12 +19,12 @@ public protocol MyServerType: Moya.TargetType {
 extension MyServerType {
     //服务器地址
     public var baseURL: URL {
-        return URL.init(string: MyServerConfig.shared.baseUrl)!
+        return URL.init(string: MyServerConfig.baseUrl)!
     }
     
     //请求头
     public var headers: [String : String]? {
-        return MyServerConfig.shared.headers
+        return MyServerConfig.defaultHeaders
     }
     
     //请求路径
@@ -38,7 +38,7 @@ extension MyServerType {
     }
     //请求参数
     public var parameters: [String: Any]? {
-        return MyServerConfig.shared.parameters
+        return MyServerConfig.defaultParameters
     }
     
     //请求任务事件（这里附带上参数）

@@ -9,29 +9,26 @@
 import Foundation
 import UIKit
 public struct MyServerConfig {
-    var baseUrl: String = "https://appapi-dev.yaozh.com/"
-    var headers: [String: String]? = defaultHeaders()
-    var parameters: [String: Any]? = defaultParameters()
-    var timeoutInterval: Double = 15.0
+    static let baseUrl: String = "https://appapi-dev.yaozh.com/"
+    static let timeoutInterval: Double = 15.0
     
     static let shared = MyServerConfig()
     private init() {}
     
-    static func defaultHeaders() -> [String : String]? {
+    static var defaultHeaders:[String : String]? {
         return nil
     }
     
-    static func defaultParameters() -> [String : Any]? {
-        
+    static var defaultParameters: [String : Any]? {
         var parameters = [String : Any]()
-        
         let timeStamp = String(Date().unixTimestamp.int)
+        let randStr = UUID().uuidString
         parameters["client"] = "iOS"
         parameters["timeStamp"] = timeStamp
         parameters["version"] = UIApplication.shared.version
-        parameters["randStr"] = UUID().uuidString
+        parameters["randStr"] = randStr
         parameters["ip"] = getIP() ?? ""
-        parameters["signature"] = signature(timeStamp: timeStamp,randStr: UUID().uuidString)
+        parameters["signature"] = MyServerConfig.signature(timeStamp: timeStamp,randStr: randStr)
         return parameters
     }
     

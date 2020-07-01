@@ -70,29 +70,33 @@ class HomeViewController: BaseViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        //        let news = MeViewController.init()
-        //        navigationController?.pushViewController(news, animated: true)
-//        serverApi.provider.rx.request(.mockResponse).asObservable().mapModel(Model.self).subscribe(onNext: { (model) in
-//            print(model)
-//        }, onError: { (err) in
-//            print(err)
-//            }).dispose()
         
-        if NetworkStatusManager.sharedManager.isReachableOnWiFi {
-            print(wifiIP as Any)
-            
-        }else {
-            print(deviceIP as Any)
-        }
-
+//                let news = MeViewController.init()
+//                navigationController?.pushViewController(news, animated: true)
+        serverApi.provider.rx.request(.databaseNav).asObservable().mapModel(NavItems.self).subscribe(onNext: { (model) in
+                    print(model)
+                }, onError: { (err) in
+                    print(err)
+                    })
+//        serverApi.provider.rx.request(.databaseNav).subscribe(onSuccess: { (res) in
+//            print(res)
+//        }) { (err) in
+//            print(err)
+//        }
+        
+//        serverApi.provider.request(.databaseNav) { (res) in
+//            switch res.result {
+//            case .success(let response):
+//                print("=======================================")
+//                print(response)
+//            case .failure(let err):
+//                print(err)
+//            }
+//        }
+        
     }
     
     
     
 }
 
-//struct Model: HandyJSON {
-//    var id = 0
-//    
-//}

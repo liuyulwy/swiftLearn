@@ -87,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         NetworkStatusManager.sharedManager.startNetworkReachabilityObserver()
-       
+ 
         return true
     }
 }

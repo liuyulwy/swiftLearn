@@ -11,7 +11,7 @@ import Alamofire
 class NetworkStatusManager {
     static let sharedManager = NetworkStatusManager()
     private init() {}
-    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: MyServerConfig.shared.baseUrl)
+    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: MyServerConfig.baseUrl)
     var isReachable: Bool { return reachabilityManager?.isReachable ?? false }
     var isReachableOnWWAN: Bool { return reachabilityManager?.isReachableOnWWAN ?? false }
     var isReachableOnWiFi: Bool { return reachabilityManager?.isReachableOnEthernetOrWiFi ?? false }

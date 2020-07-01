@@ -15,6 +15,7 @@ enum MyServerApi {
     case mockResponse
     case userProfile(String)
     case userRepositories(String)
+    case databaseNav
 }
 
 extension MyServerApi: MyServerType {
@@ -27,10 +28,16 @@ extension MyServerApi: MyServerType {
         switch self {
         case .userProfile(_):
             return .get("path")
+        case .databaseNav:
+            return .get("config/getNav")
         default: break
             
         }
         return .get("/path")
+    }
+    
+    var path: String {
+        return route.path
     }
     //设置参数
     public var parameters: [String : Any]? {
@@ -42,9 +49,9 @@ extension MyServerApi: MyServerType {
             
         }
         if tempParameters.isEmpty {
-            return MyServerConfig.shared.parameters
+            return MyServerConfig.defaultParameters
         }else {
-            guard let defaultParameters = MyServerConfig.shared.parameters else {
+            guard let defaultParameters = MyServerConfig.defaultParameters else {
                 return tempParameters
             }
             tempParameters.merge(defaultParameters) { (current, _) -> Any in
@@ -56,7 +63,7 @@ extension MyServerApi: MyServerType {
     
     public var task: Moya.Task {
         switch self {
-        case .mockResponse:
+        case .databaseNav:
             guard let parameters = self.parameters else { return .requestPlain }
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         default:

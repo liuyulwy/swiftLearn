@@ -45,7 +45,7 @@ extension Networking {
             do {
                 var urlRequest = try endpoint.urlRequest()
                 //设置请求时长
-                urlRequest.timeoutInterval = MyServerConfig.shared.timeoutInterval
+                urlRequest.timeoutInterval = MyServerConfig.timeoutInterval
                 // 打印请求参数
                 //        if let requestData = urlRequest.httpBody {
                 //            print("\(urlRequest.url!)"+"\n"+"\(urlRequest.httpMethod ?? "")"+"发送参数"+"\(String(data: urlRequest.httpBody!, encoding: String.Encoding.utf8) ?? "")")
