@@ -73,7 +73,7 @@ class HomeViewController: BaseViewController {
         
 //                let news = MeViewController.init()
 //                navigationController?.pushViewController(news, animated: true)
-        serverApi.provider.rx.request(.databaseNav).asObservable().mapModel(NavItems.self).subscribe(onNext: { (model) in
+        serverApi.provider.rx.request(.databaseNav).asObservable().mapModel(ReturnArrayData<NavItems>.self).subscribe(onNext: { (model) in
                     print(model)
                 }, onError: { (err) in
                     print(err)
