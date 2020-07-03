@@ -11,7 +11,7 @@ import RxSwift
 import RxRelay
 import SnapKit
 import XCGLogger
-
+import Moya
 class HomeViewController: BaseViewController {
     
     let disposeBag = DisposeBag.init()
@@ -73,30 +73,34 @@ class HomeViewController: BaseViewController {
         
 //                let news = MeViewController.init()
 //                navigationController?.pushViewController(news, animated: true)
+         
         serverApi.provider.rx.request(.databaseNav).asObservable().mapModel(ReturnArrayData<NavItems>.self).subscribe(onNext: { (model) in
                     print(model)
                 }, onError: { (err) in
                     print(err)
+
                     })
-//        serverApi.provider.rx.request(.databaseNav).subscribe(onSuccess: { (res) in
-//            print(res)
-//        }) { (err) in
-//            print(err)
-//        }
-        
-//        serverApi.provider.request(.databaseNav) { (res) in
-//            switch res.result {
-//            case .success(let response):
-//                print("=======================================")
-//                print(response)
-//            case .failure(let err):
-//                print(err)
-//            }
-//        }
+   test()
         
     }
     
-    
-    
+    func test() {
+        let observable = Observable<String>.create{observer in
+            //对订阅者发出了.next事件，且携带了一个数据"hangge.com"
+            observer.onNext("hangge.com")
+            //对订阅者发出了.completed事件
+            observer.onCompleted()
+            //因为一个订阅行为会有一个Disposable类型的返回值，所以在结尾一定要returen一个Disposable
+            return Disposables.create()
+        }
+         
+        //订阅测试
+        observable.filter { (str) -> Bool in
+            return false
+        }.subscribe {
+            print($0)
+        }
+    }
+ 
 }
 
