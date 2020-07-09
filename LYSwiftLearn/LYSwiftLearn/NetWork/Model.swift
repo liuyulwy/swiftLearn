@@ -7,6 +7,12 @@
 //
 
 import Foundation
+
+struct NetworkError: Error {
+    var code: Int = 0
+    var msg: String = ""
+}
+
 extension Array: HandyJSON {}
 protocol BaseModelProtocol: HandyJSON {}
 class BaseModel: BaseModelProtocol{

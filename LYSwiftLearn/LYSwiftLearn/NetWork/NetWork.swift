@@ -8,7 +8,7 @@
 
 import Foundation
 import Moya
-
+import RxSwift
 public struct Networking<T: MyServerType> {
     public let provider: MoyaProvider<T>
     public init(provider: MoyaProvider<T> = defaultProvider()) {
@@ -112,11 +112,48 @@ extension Networking {
 }
 
 extension Networking {
-    public func requet(_ target: T){
-        self.provider.rx.request(target).subscribe(onSuccess: { (r) in
+    
+    func requet<M: ResponseData>(_ target: T,_ model: M.Type) -> Single<M>{
+        
+        return Single.create { (single) -> Disposable in
+            let cancellableToken = self.provider.request(target) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        let dataString = try response.mapString()// Data 转 JSON
+                        let object = JSONDeserializer<M>.deserializeFrom(json: dataString)
+                        if object != nil {
+                            if object!.success {
+                                single(.success(object!))
+                            }else {
+                                let object = NetworkError.init(code: object!.code, msg: object!.msg)
+                                single(.error(object))
+                            }
+                            
+                        }else {
+                            let object = NetworkError.init(code: 100, msg: "数据格式错误，解析失败！")
+                            single(.error(object))
+                        }
+                        
+                    } catch {
+                        let object = NetworkError.init(code: 100, msg: "数据格式错误，解析失败！")
+                        single(.error(object))
+                    }
+                    
+                case let .failure(error):
+                    let object = NetworkError.init(code: 100, msg: error.localizedDescription)
+                    single(.error(object))
+                }
+            }
             
-        }) { (e) in
-            
+            return Disposables.create {
+                cancellableToken.cancel()
+            }
         }
+        
     }
+    
+    
 }
+
+
