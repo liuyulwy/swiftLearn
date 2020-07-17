@@ -12,6 +12,8 @@ class Producer<Element> : Observable<Element> {
     }
 
     override func subscribe<Observer: ObserverType>(_ observer: Observer) -> Disposable where Observer.Element == Element {
+        print("============================")
+        print(type(of: observer))
         if !CurrentThreadScheduler.isScheduleRequired {
             // The returned disposable needs to release all references once it was disposed.
             let disposer = SinkDisposer()

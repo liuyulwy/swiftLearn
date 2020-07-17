@@ -38,6 +38,8 @@ extension ObservableType {
      */
     public func subscribe(onNext: ((Element) -> Void)? = nil, onError: ((Swift.Error) -> Void)? = nil, onCompleted: (() -> Void)? = nil, onDisposed: (() -> Void)? = nil)
         -> Disposable {
+            print("=====" + #function)
+            print(type(of: self))
             let disposable: Disposable
             
             if let disposed = onDisposed {

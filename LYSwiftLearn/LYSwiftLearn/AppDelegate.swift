@@ -8,7 +8,7 @@
 
 import UIKit
 import XCGLogger
-
+import SwifterSwift
 let log: XCGLogger = {
     let log = XCGLogger.init(identifier: "advancedLogger", includeDefaultDestinations: false)
     //控制台打印设置

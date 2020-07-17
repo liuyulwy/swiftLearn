@@ -13,32 +13,38 @@ import SnapKit
 import XCGLogger
 import Moya
 import RxCocoa
+import SkeletonView
 class HomeViewController: BaseViewController {
-    
+    let loading = ActivityIndicator()
     let disposeBag = DisposeBag.init()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print(self.navigationController?.navigationBar.isTranslucent as Any)
+        print(self.view.frame)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationTitle = "home"
-        view.backgroundColor = .white
+        view.backgroundColor = .red
         
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "hello", style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: R.image.tabbar_me_normal(), style: .plain, target: self, action: nil)
+//        self.edgesForExtendedLayout = .bottom
+//        self.extendedLayoutIncludesOpaqueBars = true
         let view = UIButton.init()
         //        view.backgroundColor = UIColor.blue
         view.frame = CGRect.init(x: 0, y: 0, width: 200, height: 200)
         self.view.addSubview(view)
         
-        view.snp.makeConstraints { (make) in
-            if #available(iOS 11.0, *) {
-                make.top.left.equalTo(self.view.safeAreaLayoutGuide)
-            } else {
-                // Fallback on earlier versions
-            }
-            make.size.equalTo(CGSize.init(width: 200, height: 200))
-        }
+//        view.snp.makeConstraints { (make) in
+//            if #available(iOS 11.0, *) {
+//                make.top.left.equalTo(self.view.safeAreaLayoutGuide)
+//            } else {
+//                // Fallback on earlier versions
+//            }
+//            make.size.equalTo(CGSize.init(width: 200, height: 200))
+//        }
         
         
         let gradientLayer = CAGradientLayer()
@@ -68,34 +74,40 @@ class HomeViewController: BaseViewController {
         }
         
         print(self.view.frame.size.height)
+        view.isSkeletonable = true
+        view1.isSkeletonable = true
+        self.view.showAnimatedSkeleton()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        serverApi.requet(.databaseNav, ReturnArrayData<NavItems>.self).subscribe(onSuccess: { (res) in
-            log.debug(res)
-            
-        }) { (err) in
-            log.debug(err)
-        }.disposed(by: disposeBag)
+//        startAnimating()
+//        serverApi.requet(.databaseNav, ReturnArrayData<NavItems>.self).trackActivity(loading).asObservable().subscribe(onNext: { (res) in
+//
+//        }, onError: { (err) in
+//
+//        }, onCompleted: {
+//            self.stopAnimating()
+//        }) {
+//
+//        }.disposed(by: disposeBag)
+        
+        
+        
+//        let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+//        observable
+//            .map { "当前索引数：\($0 )"}.bind { text in
+//                print(text)
+//        }.disposed(by: disposeBag)
+        
+//        Observable<Int>.interval(.seconds(2), scheduler: MainScheduler.instance).map { (i) -> String in
+//            return "\(i)"
+//        }.bind { (text) in
+//            print(text)
+//        }.disposed(by: disposeBag)
         
         
     }
-    
-    func test() -> Observable<String> {
-        let observable = Observable<String>.create{observer in
-            //对订阅者发出了.next事件，且携带了一个数据"hangge.com"
-//            observer.onNext("hangge.com")
-//            //对订阅者发出了.completed事件
-//            observer.onCompleted()
-            let err = Myerr.init()
-            observer.onError(err)
-            //因为一个订阅行为会有一个Disposable类型的返回值，所以在结尾一定要returen一个Disposable
-            return Disposables.create()
-        }
-        return observable
-        
-    }
- 
+
 }
 
 struct Myerr: Error {

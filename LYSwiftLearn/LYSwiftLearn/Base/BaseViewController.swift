@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
-class BaseViewController: UIViewController {
-    
+import NVActivityIndicatorView
+class BaseViewController: UIViewController, NVActivityIndicatorViewable{
+  
     //导航标题
     var navigationTitle = "" {
         didSet {
@@ -34,11 +34,11 @@ class BaseViewController: UIViewController {
     }
     
     func makeUI() {
-        if #available(iOS 11.0, *) {
-            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
-        } else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
+//        if #available(iOS 11.0, *) {
+//            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
+//        } else {
+//            automaticallyAdjustsScrollViewInsets = false
+//        }
         view.backgroundColor = .white
         navigationItem.backBarButtonItem = backBarButton
     }

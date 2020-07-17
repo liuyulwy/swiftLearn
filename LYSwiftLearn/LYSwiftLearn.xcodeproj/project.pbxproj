@@ -15,6 +15,7 @@
 		1717D8EA24A9C2B70096C1D1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717D8E924A9C2B70096C1D1 /* Route.swift */; };
 		172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172670742491EEB8000387FA /* TabbarItemContentView.swift */; };
 		175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E95A124A1F41B00F6BC67 /* LYApi.swift */; };
+		1760FC3924BD3A8200B8CF46 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */; };
 		1773342324AC5A070086303C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773342224AC5A070086303C /* Model.swift */; };
 		177685E0249CF48D00F3B1E0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177685DF249CF48D00F3B1E0 /* Constant.swift */; };
 		17A2320524A2F0B600D1BE34 /* Observable+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2320224A2F0B600D1BE34 /* Observable+Response.swift */; };
@@ -125,6 +126,7 @@
 		1717D8E924A9C2B70096C1D1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		172670742491EEB8000387FA /* TabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItemContentView.swift; sourceTree = "<group>"; };
 		175E95A124A1F41B00F6BC67 /* LYApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYApi.swift; sourceTree = "<group>"; };
+		1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		1773342224AC5A070086303C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		177685DF249CF48D00F3B1E0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		17A2320224A2F0B600D1BE34 /* Observable+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Response.swift"; sourceTree = "<group>"; };
@@ -304,6 +306,14 @@
 			path = NetWork;
 			sourceTree = "<group>";
 		};
+		1760FC3724BD3A8200B8CF46 /* RxActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */,
+			);
+			path = RxActivityIndicator;
+			sourceTree = "<group>";
+		};
 		17A2320124A2F0B600D1BE34 /* RxMoya */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +361,7 @@
 		17CDEE0124911EAD0052928B /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1760FC3724BD3A8200B8CF46 /* RxActivityIndicator */,
 				17DA68FF24AB081000BC5541 /* HandyJSON */,
 				17DA68F824AAE28400BC5541 /* ObjectMapper-rx */,
 				17A2320124A2F0B600D1BE34 /* RxMoya */,
@@ -805,6 +816,7 @@
 				17DA694524AB083700BC5541 /* Metadata.swift in Sources */,
 				17DA694324AB083700BC5541 /* Properties.swift in Sources */,
 				17DA693124AB083700BC5541 /* Export.swift in Sources */,
+				1760FC3924BD3A8200B8CF46 /* ActivityIndicator.swift in Sources */,
 				1717AA4E249A05F3000851B6 /* MeViewController.swift in Sources */,
 				17B16AA42490E21F00E259F1 /* TabBarController.swift in Sources */,
 				17DA694C24AB083700BC5541 /* FieldDescriptor.swift in Sources */,

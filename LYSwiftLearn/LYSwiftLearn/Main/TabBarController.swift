@@ -8,7 +8,7 @@
 
 import UIKit
 import ESTabBarController_swift
-import SwifterSwift
+//import SwifterSwift
 class TabBarController: ESTabBarController {
     
     override func viewDidLoad() {
@@ -43,21 +43,23 @@ class TabBarController: ESTabBarController {
         appearance.shadowImage = R.image.tapbar_top_line()
         appearance.backgroundImage = UIImage.init()
         appearance.barTintColor = UIColor.white
-        appearance.isTranslucent = false
+//        appearance.isTranslucent = false
         
         let navAppearance = UINavigationBar.appearance()
 //        navAppearance.backgroundColor = .white
 //        navAppearance.barTintColor = .white
         navAppearance.shadowImage = R.image.transparent()
-        navAppearance.setBackgroundImage(navBackgroundImage().withRenderingMode(.alwaysOriginal), for: .default)
-//        navAppearance.tintColor = .white
+        navAppearance.setBackgroundImage(R.image.transparent()!.withRenderingMode(.alwaysOriginal), for: .default)
+//        navAppearance.tintColor = .red //UIBarButtonItem 颜色
+        navAppearance.barTintColor = .white
         navAppearance.isTranslucent = false
-        navAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
-        navAppearance.backIndicatorImage = R.image.back()?.withRenderingMode(.alwaysOriginal)
-        navAppearance.backIndicatorTransitionMaskImage = R.image.back()?.withRenderingMode(.alwaysOriginal)
-        
-        let itemAppearance = UIBarButtonItem.appearance()
-        itemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .normal)
+
+//        navAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
+//        navAppearance.backIndicatorImage = R.image.back()?.withRenderingMode(.alwaysOriginal)
+//        navAppearance.backIndicatorTransitionMaskImage = R.image.back()?.withRenderingMode(.alwaysOriginal)
+//        
+//        let itemAppearance = UIBarButtonItem.appearance()
+//        itemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .normal)
         
     }
     
