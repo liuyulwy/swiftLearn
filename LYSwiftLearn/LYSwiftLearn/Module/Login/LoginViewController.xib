@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="LYSwiftLearn" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="xoO-SS-rLI" id="mv9-HC-Slm"/>
+                <outlet property="passworldTextField" destination="WPZ-KK-tvX" id="c6F-Iq-fud"/>
+                <outlet property="userNameTextField" destination="lzo-B5-W7a" id="c9X-iJ-Kk8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yUc-67-ttz">
+                    <rect key="frame" x="15" y="399" width="384" height="98"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7u-eF-aZ3">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="44"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzo-B5-W7a">
+                                    <rect key="frame" x="0.0" y="0.0" width="384" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="90z-cn-7PR"/>
+                                <constraint firstAttribute="bottom" secondItem="lzo-B5-W7a" secondAttribute="bottom" id="EGb-nn-1p6"/>
+                                <constraint firstItem="lzo-B5-W7a" firstAttribute="leading" secondItem="r7u-eF-aZ3" secondAttribute="leading" id="cbR-ld-vhh"/>
+                                <constraint firstAttribute="trailing" secondItem="lzo-B5-W7a" secondAttribute="trailing" id="eK0-W4-rck"/>
+                                <constraint firstItem="lzo-B5-W7a" firstAttribute="top" secondItem="r7u-eF-aZ3" secondAttribute="top" id="wqo-OC-mX6"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="22"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlV-v1-E8g">
+                            <rect key="frame" x="0.0" y="54" width="384" height="44"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPZ-KK-tvX">
+                                    <rect key="frame" x="0.0" y="0.0" width="384" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="0b2-CQ-f1K"/>
+                                <constraint firstAttribute="trailing" secondItem="WPZ-KK-tvX" secondAttribute="trailing" id="AbL-OX-j4W"/>
+                                <constraint firstItem="WPZ-KK-tvX" firstAttribute="leading" secondItem="hlV-v1-E8g" secondAttribute="leading" id="BCO-j7-hBf"/>
+                                <constraint firstAttribute="bottom" secondItem="WPZ-KK-tvX" secondAttribute="bottom" id="YOK-cg-teW"/>
+                                <constraint firstItem="WPZ-KK-tvX" firstAttribute="top" secondItem="hlV-v1-E8g" secondAttribute="top" id="xLj-BE-gQ8"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="22"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="r7u-eF-aZ3" secondAttribute="trailing" id="Syd-RE-jqR"/>
+                        <constraint firstItem="hlV-v1-E8g" firstAttribute="leading" secondItem="yUc-67-ttz" secondAttribute="leading" id="bLF-HB-0rN"/>
+                        <constraint firstAttribute="bottom" secondItem="hlV-v1-E8g" secondAttribute="bottom" id="cN9-YF-tE7"/>
+                        <constraint firstItem="r7u-eF-aZ3" firstAttribute="leading" secondItem="yUc-67-ttz" secondAttribute="leading" id="hSM-aS-AYZ"/>
+                        <constraint firstItem="r7u-eF-aZ3" firstAttribute="top" secondItem="yUc-67-ttz" secondAttribute="top" id="liV-PK-CAQ"/>
+                        <constraint firstAttribute="trailing" secondItem="hlV-v1-E8g" secondAttribute="trailing" id="wQH-rf-PSC"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoO-SS-rLI">
+                    <rect key="frame" x="20" y="596" width="374" height="40"/>
+                    <color key="backgroundColor" red="0.2274509804" green="0.3411764706" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8EZ-aB-G4y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="yUc-67-ttz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="11S-73-jjc"/>
+                <constraint firstItem="yUc-67-ttz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="4eA-DY-AyJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xoO-SS-rLI" secondAttribute="trailing" constant="20" id="M0Z-FZ-T0b"/>
+                <constraint firstItem="xoO-SS-rLI" firstAttribute="top" secondItem="yUc-67-ttz" secondAttribute="bottom" constant="99" id="MWn-5X-3AZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yUc-67-ttz" secondAttribute="trailing" constant="15" id="PKA-np-ngg"/>
+                <constraint firstItem="xoO-SS-rLI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aHX-un-5eh"/>
+                <constraint firstItem="yUc-67-ttz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cx5-4z-p3X"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-714" y="-63"/>
+        </view>
+    </objects>
+</document>

@@ -31,53 +31,9 @@ class IntegralViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationTitle = "integral"
-        
-//        let p = Planet.venus
-//        log.debug(p.rawValue)
-//        let p1 = Planets.venus
-//        log.debug(type(of: p1.rawValue))
-//
-//        let five = ArithmeticExpression.number(5)
-//        let four = ArithmeticExpression.number(4)
-//        let sum = ArithmeticExpression.addition(five, four)
-//        let product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))
-//        log.debug(product)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        test2()
-        
-    }
-    
-    func test3(a: String...) {
-        
-    }
-    
-    func test2() {
-        
-    
-        
-    }
-    
-    func test1(){
-        let observable = Observable<String>.create { (observer) -> Disposable in
-            
-            return Disposables.create {
-                
-            }
-        }
-        
-        observable.subscribe(onNext: { (s) in
-            
-        }, onError: { (e) in
-            
-        }, onCompleted: {
-            
-        }) {
-            
-        }.dispose()
-        
         
     }
 }

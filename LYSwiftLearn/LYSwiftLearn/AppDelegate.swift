@@ -9,6 +9,8 @@
 import UIKit
 import XCGLogger
 import SwifterSwift
+import RxSwift
+import IQKeyboardManagerSwift
 let log: XCGLogger = {
     let log = XCGLogger.init(identifier: "advancedLogger", includeDefaultDestinations: false)
     //控制台打印设置
@@ -85,9 +87,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainController = TabBarController()
         window?.rootViewController = mainController
         window?.makeKeyAndVisible()
+        setKeyboard()
         
         NetworkStatusManager.sharedManager.startNetworkReachabilityObserver()
- 
+        #if DEBUG
+        _ = Observable<Int>.interval(.seconds(60), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { _ in
+                print("Resource count \(RxSwift.Resources.total)")
+            })
+        #endif
         return true
+    }
+    
+    
+    func setKeyboard() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "完成"
+        
     }
 }

@@ -1,70 +1,71 @@
 PODS:
-  - Alamofire (4.8.2)
+  - Alamofire (5.2.2)
   - AsyncSwift (2.0.4)
-  - CryptoSwift (1.0.0)
-  - DeviceKit (2.0.0)
+  - CryptoSwift (1.3.1)
+  - DeviceKit (3.2.0)
   - Differentiator (4.0.1)
-  - Dollar (8.0.0)
-  - ESTabBarController-swift (2.7)
-  - FSPagerView (0.8.2)
-  - Hue (4.0.0)
-  - IQKeyboardManagerSwift (6.3.0)
-  - KeychainAccess (3.2.0)
-  - Kingfisher (5.4.0)
+  - Dollar (9.0.0)
+  - ESTabBarController-swift (2.8.0)
+  - FSPagerView (0.8.3)
+  - Hue (5.0.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - KeychainAccess (4.2.0)
+  - Kingfisher (5.15.0):
+    - Kingfisher/Core (= 5.15.0)
+  - Kingfisher/Core (5.15.0)
   - Localize-Swift (3.1.0)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
-  - Nimble (8.0.1)
-  - NVActivityIndicatorView (4.7.0):
-    - NVActivityIndicatorView/Presenter (= 4.7.0)
-  - NVActivityIndicatorView/Presenter (4.7.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Nimble (8.1.1)
+  - NVActivityIndicatorView (5.0.1):
+    - NVActivityIndicatorView/Base (= 5.0.1)
+  - NVActivityIndicatorView/Base (5.0.1)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - ObjectMapper (3.4.2)
-  - PromiseKit (6.8.4):
-    - PromiseKit/CorePromise (= 6.8.4)
-    - PromiseKit/Foundation (= 6.8.4)
-    - PromiseKit/UIKit (= 6.8.4)
-  - PromiseKit/CorePromise (6.8.4)
-  - PromiseKit/Foundation (6.8.4):
+  - ObjectMapper (4.2.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.8.4):
+  - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
-  - PryntTrimmerView (3.0.0)
-  - Quick (2.1.0)
+  - PryntTrimmerView (4.0.0)
+  - Quick (3.0.0)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
-  - RAMAnimatedTabBarController (5.0.0)
-  - ReachabilitySwift (4.3.1)
-  - ReactiveCocoa (10.0.0):
-    - ReactiveSwift (~> 6.0)
-  - ReactiveSwift (6.0.0)
-  - Result (4.1.0)
-  - ReSwift (4.1.1)
-  - RxAlamofire (5.0.0):
-    - RxAlamofire/Core (= 5.0.0)
-  - RxAlamofire/Core (5.0.0):
-    - Alamofire (~> 4.8)
-    - RxSwift (~> 5.0)
-  - RxCocoa (5.0.0):
+  - RAMAnimatedTabBarController (5.2.0)
+  - ReachabilitySwift (5.0.0)
+  - ReactiveCocoa (11.0.0):
+    - ReactiveSwift (~> 6.2)
+  - ReactiveSwift (6.3.0)
+  - Result (5.0.0)
+  - ReSwift (5.0.0)
+  - RxAlamofire (5.6.0):
+    - RxAlamofire/Core (= 5.6.0)
+  - RxAlamofire/Core (5.6.0):
+    - Alamofire (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxDataSources (4.0.1):
     - Differentiator (~> 4.0)
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - RxRelay (5.0.0):
+  - RxRelay (5.1.1):
     - RxSwift (~> 5)
-  - RxSwift (5.0.0)
-  - Schedule (2.0.1)
-  - SkeletonView (1.5)
-  - SnapKit (5.0.0)
-  - SteviaLayout (4.4.4)
+  - RxSwift (5.1.1)
+  - Schedule (2.1.0)
+  - SkeletonView (1.8.7)
+  - SnapKit (5.0.1)
+  - SteviaLayout (4.7.3)
   - SwifterSwift (5.2.0):
     - SwifterSwift/AppKit (= 5.2.0)
     - SwifterSwift/CoreAnimation (= 5.2.0)
@@ -90,18 +91,18 @@ PODS:
   - SwifterSwift/StoreKit (5.2.0)
   - SwifterSwift/SwiftStdlib (5.2.0)
   - SwifterSwift/UIKit (5.2.0)
-  - SwiftLint (0.32.0)
+  - SwiftLint (0.40.0)
   - SwiftyJSON (5.0.0)
-  - SwiftyStoreKit (0.15.0)
-  - SwiftyUserDefaults (4.0.0)
-  - Swinject (2.6.0)
-  - XCGLogger (7.0.0):
-    - XCGLogger/Core (= 7.0.0)
-  - XCGLogger/Core (7.0.0):
+  - SwiftyStoreKit (0.16.1)
+  - SwiftyUserDefaults (5.0.0)
+  - Swinject (2.7.1)
+  - XCGLogger (7.0.1):
+    - XCGLogger/Core (= 7.0.1)
+  - XCGLogger/Core (7.0.1):
     - ObjcExceptionBridging
-  - YPImagePicker (4.0.0):
-    - PryntTrimmerView (~> 3.0.0)
-    - SteviaLayout (~> 4.4.1)
+  - YPImagePicker (4.3.1):
+    - PryntTrimmerView (~> 4.0.0)
+    - SteviaLayout (~> 4.7.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -193,53 +194,53 @@ SPEC REPOS:
     - YPImagePicker
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
-  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
-  DeviceKit: 72d36709552d4b3582abd76a53949148acad9811
+  CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
+  DeviceKit: d081659419cce07c0b5239dbc9fb39ed7413c7fe
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  Dollar: 82581ff2e4e80b26ba11fad5ac7e638892522ca5
-  ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
-  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
-  Hue: afe18b4e819e2848e7d2d5b4b33f4d3f88dd921b
-  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
-  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
-  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  Dollar: 2fc9bdeeb2d3ae1f251461803240d5c93829ee0c
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
+  Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
   Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
-  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
-  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
-  PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
-  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
-  RAMAnimatedTabBarController: 6736db7bec2ec74d64059ee9cb40cb9bd281338e
-  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
-  ReactiveCocoa: 6d4c37ba236f5d9a7a55b2172cd09f19ba85f574
-  ReactiveSwift: 24b7ed245617bbfd30ee0c87779b6c64ac1b4518
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  ReSwift: d925be0033558f55bd73d92869961230dfe19d52
-  RxAlamofire: e7875a012aff55345672d0f70a2a9cd6aeb0f211
-  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  ReactiveCocoa: 189fcea9c5af7e394dd8a4cfc1c6f77af9ff3598
+  ReactiveSwift: 7937f26ec18d555e2a99352bd0a8b2817d1f042d
+  Result: ed341d2f236af425b803e690e9bd8fd0a0cb7c5a
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
+  RxAlamofire: f34ddbab56fa2a36f99737f4d4ecc22288a1384f
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
-  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
-  Schedule: 8a15d82693cfa880704cd40af4bccb14bdecdddf
-  SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
-  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
-  SteviaLayout: 523469269059f2c6da02820bb2ff28a5fe0780aa
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  Schedule: 00e6d7bbdbdb000fd1f51a7d10e9f88a8c451fda
+  SkeletonView: ba5370f41280b2f0a76918bb143c1294232bb4f4
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
-  SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+  SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
-  SwiftyUserDefaults: 6a1951df1daa19337862b677dd9a4b9bd4c288cd
-  Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
-  XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
-  YPImagePicker: 8039f89ad79281545fa868486f32d9bf5d65ede1
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  SwiftyUserDefaults: 33fcb42bd1feb53a37d873feb62c82967db5f7f6
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  XCGLogger: 1943831ef907df55108b0b18657953f868de973b
+  YPImagePicker: 08bbb809ed62bf4149fc015c97249eb4b9463ff9
 
-PODFILE CHECKSUM: 99354686112e3b82f97e96cd34a59a2cee2c5810
+PODFILE CHECKSUM: cfba535f8bfe9eccd7d91109ca0d84960a737f2a
 
 COCOAPODS: 1.9.1

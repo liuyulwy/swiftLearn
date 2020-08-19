@@ -6,6 +6,25 @@ import RxCocoa
 
 let disposeBag = DisposeBag.init()
 
+
+let observable = Observable<String>.create { (observer) -> Disposable in
+    
+    print("observe:\(observer)")
+    observer.onNext("a")
+    
+    return Disposables.create {
+        
+    }
+}
+observable.subscribe { (event) in
+    print(event)
+}.disposed(by: disposeBag)
+
+observable.subscribe { (event) in
+    print(event)
+}.disposed(by: disposeBag)
+
+
 Observable<Any>.empty().subscribe { (event) in
     print(event)
 }.disposed(by: disposeBag)

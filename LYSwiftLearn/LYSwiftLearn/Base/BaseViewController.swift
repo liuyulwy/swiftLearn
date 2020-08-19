@@ -8,8 +8,11 @@
 
 import UIKit
 import NVActivityIndicatorView
-class BaseViewController: UIViewController, NVActivityIndicatorViewable{
-  
+import RxSwift
+
+
+class BaseViewController: UIViewController{
+    
     //导航标题
     var navigationTitle = "" {
         didSet {
@@ -33,18 +36,22 @@ class BaseViewController: UIViewController, NVActivityIndicatorViewable{
         super.viewWillAppear(animated)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateUI()
+    }
+    
     func makeUI() {
-//        if #available(iOS 11.0, *) {
-//            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
-//        } else {
-//            automaticallyAdjustsScrollViewInsets = false
-//        }
+        //        if #available(iOS 11.0, *) {
+        //            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
+        //        } else {
+        //            automaticallyAdjustsScrollViewInsets = false
+        //        }
         view.backgroundColor = .white
         navigationItem.backBarButtonItem = backBarButton
     }
-    
-    func bindViewModel() {
-    }
+    func updateUI() { }
+    func bindViewModel() { }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

@@ -28,23 +28,23 @@ class HomeViewController: BaseViewController {
         navigationTitle = "home"
         view.backgroundColor = .red
         
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "hello", style: .plain, target: self, action: nil)
+        //        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "hello", style: .plain, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: R.image.tabbar_me_normal(), style: .plain, target: self, action: nil)
-//        self.edgesForExtendedLayout = .bottom
-//        self.extendedLayoutIncludesOpaqueBars = true
+        //        self.edgesForExtendedLayout = .bottom
+        //        self.extendedLayoutIncludesOpaqueBars = true
         let view = UIButton.init()
         //        view.backgroundColor = UIColor.blue
         view.frame = CGRect.init(x: 0, y: 0, width: 200, height: 200)
         self.view.addSubview(view)
         
-//        view.snp.makeConstraints { (make) in
-//            if #available(iOS 11.0, *) {
-//                make.top.left.equalTo(self.view.safeAreaLayoutGuide)
-//            } else {
-//                // Fallback on earlier versions
-//            }
-//            make.size.equalTo(CGSize.init(width: 200, height: 200))
-//        }
+        //        view.snp.makeConstraints { (make) in
+        //            if #available(iOS 11.0, *) {
+        //                make.top.left.equalTo(self.view.safeAreaLayoutGuide)
+        //            } else {
+        //                // Fallback on earlier versions
+        //            }
+        //            make.size.equalTo(CGSize.init(width: 200, height: 200))
+        //        }
         
         
         let gradientLayer = CAGradientLayer()
@@ -91,25 +91,10 @@ class HomeViewController: BaseViewController {
 //
 //        }.disposed(by: disposeBag)
         
-        
-        
-//        let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
-//        observable
-//            .map { "当前索引数：\($0 )"}.bind { text in
-//                print(text)
-//        }.disposed(by: disposeBag)
-        
-//        Observable<Int>.interval(.seconds(2), scheduler: MainScheduler.instance).map { (i) -> String in
-//            return "\(i)"
-//        }.bind { (text) in
-//            print(text)
-//        }.disposed(by: disposeBag)
-        
-        
+        let login = LoginViewController()
+        login.modalPresentationStyle = .fullScreen
+        self.present(login, animated: true, completion: nil)
+    
     }
-
-}
-
-struct Myerr: Error {
     
 }

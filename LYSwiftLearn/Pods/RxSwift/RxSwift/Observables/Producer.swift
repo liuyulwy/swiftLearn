@@ -12,8 +12,6 @@ class Producer<Element> : Observable<Element> {
     }
 
     override func subscribe<Observer: ObserverType>(_ observer: Observer) -> Disposable where Observer.Element == Element {
-        print("============================")
-        print(type(of: observer))
         if !CurrentThreadScheduler.isScheduleRequired {
             // The returned disposable needs to release all references once it was disposed.
             let disposer = SinkDisposer()
@@ -38,8 +36,8 @@ class Producer<Element> : Observable<Element> {
     }
 }
 
-fileprivate final class SinkDisposer: Cancelable {
-    fileprivate enum DisposeState: Int32 {
+private final class SinkDisposer: Cancelable {
+    private enum DisposeState: Int32 {
         case disposed = 1
         case sinkAndSubscriptionSet = 2
     }

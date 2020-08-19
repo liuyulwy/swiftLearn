@@ -13,11 +13,11 @@ class NetworkStatusManager {
     private init() {}
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: MyServerConfig.baseUrl)
     var isReachable: Bool { return reachabilityManager?.isReachable ?? false }
-    var isReachableOnWWAN: Bool { return reachabilityManager?.isReachableOnWWAN ?? false }
+    var isReachableOnWWAN: Bool { return reachabilityManager?.isReachableOnCellular ?? false }
     var isReachableOnWiFi: Bool { return reachabilityManager?.isReachableOnEthernetOrWiFi ?? false }
     
     func startNetworkReachabilityObserver() {
-        reachabilityManager?.listener = { status in
+        reachabilityManager?.startListening(onUpdatePerforming: { (status) in
             switch status {
             case .notReachable:
                 print("The network is not reachable")
@@ -28,11 +28,10 @@ class NetworkStatusManager {
             case .reachable(.ethernetOrWiFi):
                 print("The network is reachable over the WiFi connection")
                 
-            case .reachable(.wwan):
+            case .reachable(.cellular):
                 print("The network is reachable over the WWAN connection")
             }
-        }
-        reachabilityManager?.startListening()
+        })
     }
     
     deinit {

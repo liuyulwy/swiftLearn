@@ -18,7 +18,7 @@ public struct Networking<T: MyServerType> {
 
 extension Networking {
     public static func defaultProvider() -> MoyaProvider<T> {
-        return MoyaProvider.init(endpointClosure: self.endpointClosure(), requestClosure: self.requestClosure(), stubClosure: self.stubClosure(), callbackQueue: nil, manager: self.mannager(), plugins: self.plugins, trackInflights: false)
+        return MoyaProvider.init(endpointClosure: self.endpointClosure(), requestClosure: self.requestClosure(), stubClosure: self.stubClosure(), callbackQueue: nil, session:self.defaultAlamofireSession(), plugins: self.plugins, trackInflights: false)
     }
 }
 
@@ -73,13 +73,12 @@ extension Networking {
         }
     }
     
-    //自定义一个 Alamofire.Manager实例对象。
-    public static func mannager() -> Manager {
+    //自定义一个 Alamofire.Session实例对象。
+    public static func defaultAlamofireSession() -> Session {
         let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = Manager.defaultHTTPHeaders
-        let manager = Manager(configuration: configuration)
-        manager.startRequestsImmediately = false
-        return manager
+        configuration.headers = .default
+
+        return Session(configuration: configuration, startRequestsImmediately: false)
     }
     
     public static var plugins: [PluginType] {
@@ -92,22 +91,22 @@ extension Networking {
             }
         }
         
-        let networkLoggerPlugin = NetworkLoggerPlugin.init(verbose: true, cURL: false, output: { (_ separator: String, _ terminator: String, _ items: Any...) in
-            for item in items {
-                log.debug(item)
-                //        log.debug(separator)
-                //        log.debug(terminator)
-            }
-        }, requestDataFormatter: nil) { (data) -> (Data) in
-            do {
-                let dataAsJSON = try JSONSerialization.jsonObject(with: data)// Data 转 JSON
-                let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)// JSON 转 Data，格式化输出。
-                return prettyData
-            } catch {
-                return data
-            }
-        }
-        return [networkActivityPlugin, networkLoggerPlugin]
+//        let networkLoggerPlugin = NetworkLoggerPlugin.init(verbose: true, cURL: false, output: { (_ separator: String, _ terminator: String, _ items: Any...) in
+//            for item in items {
+//                log.debug(item)
+//                //        log.debug(separator)
+//                //        log.debug(terminator)
+//            }
+//        }, requestDataFormatter: nil) { (data) -> (Data) in
+//            do {
+//                let dataAsJSON = try JSONSerialization.jsonObject(with: data)// Data 转 JSON
+//                let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)// JSON 转 Data，格式化输出。
+//                return prettyData
+//            } catch {
+//                return data
+//            }
+//        }
+        return [networkActivityPlugin]
     }
 }
 
