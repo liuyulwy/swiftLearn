@@ -16,6 +16,7 @@
 		172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172670742491EEB8000387FA /* TabbarItemContentView.swift */; };
 		175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E95A124A1F41B00F6BC67 /* LYApi.swift */; };
 		1760FC3924BD3A8200B8CF46 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */; };
+		176A0C9C24EE5AB5007857DE /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A0C9B24EE5AB5007857DE /* Navigator.swift */; };
 		1773342324AC5A070086303C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773342224AC5A070086303C /* Model.swift */; };
 		177685E0249CF48D00F3B1E0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177685DF249CF48D00F3B1E0 /* Constant.swift */; };
 		1799FD9F24ED0E1E00DA1402 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1799FD9D24ED0E1E00DA1402 /* LoginViewController.swift */; };
@@ -131,6 +132,7 @@
 		172670742491EEB8000387FA /* TabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItemContentView.swift; sourceTree = "<group>"; };
 		175E95A124A1F41B00F6BC67 /* LYApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYApi.swift; sourceTree = "<group>"; };
 		1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		176A0C9B24EE5AB5007857DE /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		1773342224AC5A070086303C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		177685DF249CF48D00F3B1E0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1799FD9D24ED0E1E00DA1402 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				17FDF4F2248E181300642055 /* Localizable.strings */,
 				177685DF249CF48D00F3B1E0 /* Constant.swift */,
 				17DA695C24AB395300BC5541 /* BridgeHeader.h */,
+				176A0C9B24EE5AB5007857DE /* Navigator.swift */,
 			);
 			path = LYSwiftLearn;
 			sourceTree = "<group>";
@@ -813,6 +816,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17DA695B24AB344300BC5541 /* Device.swift in Sources */,
+				176A0C9C24EE5AB5007857DE /* Navigator.swift in Sources */,
 				17DA693724AB083700BC5541 /* Deserializer.swift in Sources */,
 				1799FDA424ED1A9600DA1402 /* LoginViewModel.swift in Sources */,
 				17B16A9F2490A92100E259F1 /* BaseViewController.swift in Sources */,

@@ -14,11 +14,11 @@ class TabBarController: ESTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configAppearance()
-        let v1 = HomeViewController()
-        let v2 = NewsViewController()
-        let v3 = DataBaseViewController()
-        let v4 = IntegralViewController()
-        let v5 = MeViewController()
+        let v1 = HomeViewController(viewModel: nil)
+        let v2 = NewsViewController(viewModel: nil)
+        let v3 = DataBaseViewController(viewModel: nil)
+        let v4 = IntegralViewController(viewModel: nil)
+        let v5 = MeViewController(viewModel: nil)
         
         v1.tabBarItem = ESTabBarItem.init(TabbarItemContentView.init(), title: "首页", image: R.image.tabbar_home_normal(), selectedImage: R.image.tabbar_home_selected())
         v2.tabBarItem = ESTabBarItem.init(TabbarItemContentView.init(), title: "资讯", image: R.image.tabbar_news_normal(), selectedImage: R.image.tabbar_news_selected())
@@ -60,6 +60,7 @@ class TabBarController: ESTabBarController {
         
         let itemAppearance = UIBarButtonItem.appearance()
         itemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .normal)
+        itemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], for: .highlighted)
         
     }
     

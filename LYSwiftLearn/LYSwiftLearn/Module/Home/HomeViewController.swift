@@ -16,7 +16,6 @@ import RxCocoa
 import SkeletonView
 class HomeViewController: BaseViewController {
     let loading = ActivityIndicator()
-    let disposeBag = DisposeBag.init()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(self.navigationController?.navigationBar.isTranslucent as Any)
@@ -91,9 +90,8 @@ class HomeViewController: BaseViewController {
 //
 //        }.disposed(by: disposeBag)
         
-        let login = LoginViewController()
-        login.modalPresentationStyle = .fullScreen
-        self.present(login, animated: true, completion: nil)
+        let loginViewModel = LoginViewModel.init()
+        navigator.show(segue: .login(viewModel: loginViewModel), sender: self, transition: .modal)
     
     }
     

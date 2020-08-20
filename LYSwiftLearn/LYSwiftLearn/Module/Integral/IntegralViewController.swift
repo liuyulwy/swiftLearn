@@ -27,7 +27,6 @@ indirect enum ArithmeticExpression {
     case multiplication(ArithmeticExpression, ArithmeticExpression)
 }
 class IntegralViewController: BaseViewController {
-    let disposeBag = DisposeBag.init()
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationTitle = "integral"
