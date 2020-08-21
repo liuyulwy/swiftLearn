@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class Navigator {
     static let `defualt` = Navigator()
@@ -20,6 +21,8 @@ class Navigator {
     enum Transition {
         case modal
         case navigation
+        case customModal(type: HeroDefaultAnimationType)
+        case customNavigation(type: HeroDefaultAnimationType)
     }
     
     func getTarget(segue: Scene) -> UIViewController? {
@@ -56,6 +59,17 @@ class Navigator {
             sender.present(nav, animated: true, completion: nil)
         case .navigation:
             if let nav = sender.navigationController {
+                nav.pushViewController(target, animated: true)
+            }
+        case .customModal(let type):
+            let nav = BaseNavgationController(rootViewController: target)
+            nav.modalPresentationStyle = .fullScreen
+//            nav.hero.isEnabled = true
+            nav.hero.modalAnimationType = .selectBy(presenting: .pull(direction: .left), dismissing: .slide(direction: .down))
+            sender.present(nav, animated: true, completion: nil)
+        case .customNavigation(type: let type):
+            if let nav = sender.navigationController {
+                nav.hero.navigationAnimationType = .autoReverse(presenting: type)
                 nav.pushViewController(target, animated: true)
             }
         }

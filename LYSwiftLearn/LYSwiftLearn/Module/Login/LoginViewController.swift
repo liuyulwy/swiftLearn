@@ -16,17 +16,17 @@ class LoginViewController: BaseViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isTranslucent = false
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        self.navigationController?.navigationBar.isTranslucent = false
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,5 +41,8 @@ class LoginViewController: BaseViewController {
 //        let output = LoginViewModel.transform(input)
         
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let loginViewModel = LoginViewModel.init()
+        navigator.show(segue: .login(viewModel: loginViewModel), sender: self, transition: .customModal(type: .push(direction: .up)))
+    }
 }

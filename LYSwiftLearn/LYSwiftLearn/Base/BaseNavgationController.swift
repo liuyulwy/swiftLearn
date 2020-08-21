@@ -12,6 +12,7 @@ class BaseNavgationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hero.isEnabled = true
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

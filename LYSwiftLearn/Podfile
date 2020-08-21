@@ -56,7 +56,7 @@ target 'LYSwiftLearn' do
     # 国际化
     pod 'Localize-Swift'
     
-#  	pod 'Hero' #是一个建立 iOS 视图控制器转换的库
+  	pod 'Hero' #是一个建立 iOS 视图控制器转换的库
 #  	pod 'SwiftDate'		#日期处理
 #  	pod 'MonkeyKing'	#社会化分享框架
 #  	pod 'Spring'	#动画框架

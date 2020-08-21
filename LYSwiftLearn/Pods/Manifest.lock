@@ -7,6 +7,7 @@ PODS:
   - Dollar (9.0.0)
   - ESTabBarController-swift (2.8.0)
   - FSPagerView (0.8.3)
+  - Hero (1.5.0)
   - Hue (5.0.0)
   - IQKeyboardManagerSwift (6.5.6)
   - KeychainAccess (4.2.0)
@@ -112,6 +113,7 @@ DEPENDENCIES:
   - Dollar
   - ESTabBarController-swift
   - FSPagerView
+  - Hero
   - Hue
   - IQKeyboardManagerSwift
   - KeychainAccess
@@ -154,6 +156,7 @@ SPEC REPOS:
     - Dollar
     - ESTabBarController-swift
     - FSPagerView
+    - Hero
     - Hue
     - IQKeyboardManagerSwift
     - KeychainAccess
@@ -202,6 +205,7 @@ SPEC CHECKSUMS:
   Dollar: 2fc9bdeeb2d3ae1f251461803240d5c93829ee0c
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
@@ -241,6 +245,6 @@ SPEC CHECKSUMS:
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
   YPImagePicker: 08bbb809ed62bf4149fc015c97249eb4b9463ff9
 
-PODFILE CHECKSUM: cfba535f8bfe9eccd7d91109ca0d84960a737f2a
+PODFILE CHECKSUM: dc6d6399585052fccc1792270bd415ba18a91366
 
 COCOAPODS: 1.9.1
