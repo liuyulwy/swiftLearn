@@ -65,7 +65,7 @@ class Navigator {
             let nav = BaseNavgationController(rootViewController: target)
             nav.modalPresentationStyle = .fullScreen
 //            nav.hero.isEnabled = true
-            nav.hero.modalAnimationType = .selectBy(presenting: .pull(direction: .left), dismissing: .slide(direction: .down))
+            nav.hero.modalAnimationType = .autoReverse(presenting: type)
             sender.present(nav, animated: true, completion: nil)
         case .customNavigation(type: let type):
             if let nav = sender.navigationController {

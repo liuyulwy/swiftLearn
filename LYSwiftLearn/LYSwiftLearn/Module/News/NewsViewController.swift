@@ -13,29 +13,18 @@ class NewsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationTitle = "news"
-        automaticallyAdjustsScrollViewInsets = false
-        if #available(iOS 11.0, *) {
-            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
-        } else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
         tabview = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), style: .plain)
         view.addSubview(tabview)
-        tabview.backgroundColor = .blue
         tabview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tabview.delegate = self
         tabview.dataSource = self
+        tabview.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print(tabview as Any)
-        print(self.automaticallyAdjustsScrollViewInsets)
-        if #available(iOS 11.0, *) {
-            print(self.tabview.contentInsetAdjustmentBehavior.rawValue)
-        }
-    }
+    
 
 }
 

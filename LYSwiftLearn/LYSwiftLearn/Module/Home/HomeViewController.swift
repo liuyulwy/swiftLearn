@@ -91,7 +91,7 @@ class HomeViewController: BaseViewController {
 //        }.disposed(by: disposeBag)
         
         let loginViewModel = LoginViewModel.init()
-        navigator.show(segue: .login(viewModel: loginViewModel), sender: self, transition: .customModal(type: .push(direction: .up)))
+        navigator.show(segue: .login(viewModel: loginViewModel), sender: self, transition: .customModal(type: .fade))
     
     }
     

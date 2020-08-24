@@ -16,17 +16,17 @@ class LoginViewController: BaseViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.isTranslucent = true
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        self.navigationController?.navigationBar.isTranslucent = false
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +37,13 @@ class LoginViewController: BaseViewController {
     override func bindViewModel() {
         super.bindViewModel()
         
-        let input = LoginViewModel.Input(userName: self.userNameTextField.rx.text.orEmpty.asDriver(),password: self.passworldTextField.rx.text.orEmpty.asDriver(),loginTap: self.loginButton.rx.tap.asSignal())
-//        let output = LoginViewModel.transform(input)
+        guard let viewModel = self.viewModel as? LoginViewModel else { return }
+        let input = LoginViewModel.Input( userName: self.userNameTextField.rx.text.orEmpty.asDriver(), password: self.passworldTextField.rx.text.orEmpty.asDriver(), loginTap: self.loginButton.rx.tap.asSignal() )
+        let output = viewModel.transform(input: input)
+        
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let loginViewModel = LoginViewModel.init()
-        navigator.show(segue: .login(viewModel: loginViewModel), sender: self, transition: .customModal(type: .push(direction: .up)))
+    
     }
 }

@@ -23,6 +23,9 @@ class LoginViewModel: ViewModel, ViewModelType {
 
     func transform(input: Input) -> Output {
         
+        
+        
+        
         return Output.init()
     }
 }
