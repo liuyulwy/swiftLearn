@@ -123,7 +123,7 @@
                 <constraint firstItem="yUc-67-ttz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cx5-4z-p3X"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-714" y="-63"/>
+            <point key="canvasLocation" x="-271.01449275362319" y="-129.24107142857142"/>
         </view>
     </objects>
 </document>

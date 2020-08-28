@@ -34,12 +34,44 @@ class LoginViewController: BaseViewController {
         
     }
     
+    override func makeUI() {
+   
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
         
         guard let viewModel = self.viewModel as? LoginViewModel else { return }
         let input = LoginViewModel.Input( userName: self.userNameTextField.rx.text.orEmpty.asDriver(), password: self.passworldTextField.rx.text.orEmpty.asDriver(), loginTap: self.loginButton.rx.tap.asSignal() )
         let output = viewModel.transform(input: input)
+        
+        output.signupEnable.drive(onNext: { [weak self] (enable) in
+            self?.loginButton.isEnabled = enable
+            self?.loginButton.alpha = enable ? 1.0 : 0.5
+        })
+        .disposed(by: disposeBag)
+        
+        output.validatedUserName.drive(onNext: { (result) in
+            switch result {
+            case .ok:
+                self.userNameTextField.superview?.layer.borderColor = UIColor.lightGray.cgColor
+            default:
+                self.userNameTextField.superview?.layer.borderColor = UIColor.red.cgColor
+            }
+        })
+        .disposed(by: disposeBag)
+        
+        output.validatedPassword.drive(onNext: { (result) in
+            switch result {
+            case .ok:
+                self.passworldTextField.superview?.layer.borderColor = UIColor.lightGray.cgColor
+            default:
+                self.passworldTextField.superview?.layer.borderColor = UIColor.red.cgColor
+            }
+        })
+        .disposed(by: disposeBag)
+        
+        
         
         
     }

@@ -18,14 +18,24 @@ class LoginViewModel: ViewModel, ViewModelType {
         let loginTap: Signal<()>
     }
     struct Output {
-        
+        let validatedUserName: Driver<ValidationResult>
+        let validatedPassword: Driver<ValidationResult>
+        let signingIn: Driver<Bool>
+        let signupEnable: Driver<Bool>
     }
 
     func transform(input: Input) -> Output {
         
+        let validatedUserName = input.userName.map { LoginValidationService.default.validateUserName(userName: $0) }
+        let validatedPassword = input.password.map { LoginValidationService.default.validatePassword(passworld: $0) }
+        let signingIn = ActivityIndicator().asDriver()
+        let signupEnable = Driver.combineLatest(validatedUserName, validatedPassword, signingIn) { (userName, password, signingIn) in
+            return userName.isValid && password.isValid && !signingIn
+        }.distinctUntilChanged()
+        let usernameAndPassword = Driver.combineLatest(input.userName, input.password) { (username: $0, password: $1) }
+       
         
         
-        
-        return Output.init()
+        return Output.init(validatedUserName: validatedUserName, validatedPassword: validatedPassword, signingIn: signingIn, signupEnable: signupEnable)
     }
 }

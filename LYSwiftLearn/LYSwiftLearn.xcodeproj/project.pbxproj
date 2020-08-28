@@ -14,6 +14,7 @@
 		1717AA4E249A05F3000851B6 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717AA4D249A05F3000851B6 /* MeViewController.swift */; };
 		1717D8EA24A9C2B70096C1D1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717D8E924A9C2B70096C1D1 /* Route.swift */; };
 		172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172670742491EEB8000387FA /* TabbarItemContentView.swift */; };
+		1757949524F4FDCF005A10DA /* LoginValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757949424F4FDCF005A10DA /* LoginValidationService.swift */; };
 		175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E95A124A1F41B00F6BC67 /* LYApi.swift */; };
 		1760FC3924BD3A8200B8CF46 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */; };
 		176A0C9C24EE5AB5007857DE /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A0C9B24EE5AB5007857DE /* Navigator.swift */; };
@@ -130,6 +131,7 @@
 		1717AA4D249A05F3000851B6 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		1717D8E924A9C2B70096C1D1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		172670742491EEB8000387FA /* TabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItemContentView.swift; sourceTree = "<group>"; };
+		1757949424F4FDCF005A10DA /* LoginValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationService.swift; sourceTree = "<group>"; };
 		175E95A124A1F41B00F6BC67 /* LYApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYApi.swift; sourceTree = "<group>"; };
 		1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		176A0C9B24EE5AB5007857DE /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				1799FD9D24ED0E1E00DA1402 /* LoginViewController.swift */,
 				1799FD9E24ED0E1E00DA1402 /* LoginViewController.xib */,
 				1799FDA324ED1A9600DA1402 /* LoginViewModel.swift */,
+				1757949424F4FDCF005A10DA /* LoginValidationService.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				17DA693A24AB083700BC5541 /* ContextDescriptorType.swift in Sources */,
 				17DA695624AB096700BC5541 /* Single+ObjectMapper.swift in Sources */,
 				17DA695324AB095D00BC5541 /* Response+ObjectMapper.swift in Sources */,
+				1757949524F4FDCF005A10DA /* LoginValidationService.swift in Sources */,
 				17DA693E24AB083700BC5541 /* TransformType.swift in Sources */,
 				17DA693824AB083700BC5541 /* EnumType.swift in Sources */,
 				17DA694024AB083700BC5541 /* Measuable.swift in Sources */,

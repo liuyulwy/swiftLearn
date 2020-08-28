@@ -13,19 +13,6 @@ import SnapKit
 import XCGLogger
 import Moya
 import RxCocoa
-enum Planet: Int {
-    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
-}
-
-enum Planets: String {
-    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
-}
-
-indirect enum ArithmeticExpression {
-    case number(Int)
-    case addition(ArithmeticExpression, ArithmeticExpression)
-    case multiplication(ArithmeticExpression, ArithmeticExpression)
-}
 class IntegralViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
