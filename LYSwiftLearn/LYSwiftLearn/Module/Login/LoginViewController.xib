@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="LYSwiftLearn" customModuleProvider="target">
             <connections>
+                <outlet property="activity" destination="7tg-ul-jjo" id="OJr-fF-n5A"/>
                 <outlet property="loginButton" destination="xoO-SS-rLI" id="mv9-HC-Slm"/>
                 <outlet property="passworldTextField" destination="WPZ-KK-tvX" id="c6F-Iq-fud"/>
                 <outlet property="userNameTextField" destination="lzo-B5-W7a" id="c9X-iJ-Kk8"/>
@@ -111,6 +112,10 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7tg-ul-jjo">
+                    <rect key="frame" x="158" y="215" width="83" height="67"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>

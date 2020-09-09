@@ -47,11 +47,11 @@ extension Networking {
                 //设置请求时长
                 urlRequest.timeoutInterval = MyServerConfig.timeoutInterval
                 // 打印请求参数
-                //        if let requestData = urlRequest.httpBody {
-                //            print("\(urlRequest.url!)"+"\n"+"\(urlRequest.httpMethod ?? "")"+"发送参数"+"\(String(data: urlRequest.httpBody!, encoding: String.Encoding.utf8) ?? "")")
-                //        }else{
-                //            print("\(urlRequest.url!)"+"\(String(describing: urlRequest.httpMethod))")
-                //        }
+                        if let requestData = urlRequest.httpBody {
+                            print("\(urlRequest.url!)"+"\n"+"\(urlRequest.httpMethod ?? "")"+"发送参数"+"\(String(data: urlRequest.httpBody!, encoding: String.Encoding.utf8) ?? "")")
+                        }else{
+                            print("\(urlRequest.url!)"+"\(String(describing: urlRequest.httpMethod))")
+                        }
                 closure(.success(urlRequest))
             } catch MoyaError.requestMapping(let url) {
                 closure(.failure(MoyaError.requestMapping(url)))
@@ -77,7 +77,7 @@ extension Networking {
     public static func defaultAlamofireSession() -> Session {
         let configuration = URLSessionConfiguration.default
         configuration.headers = .default
-
+        
         return Session(configuration: configuration, startRequestsImmediately: false)
     }
     
@@ -91,28 +91,28 @@ extension Networking {
             }
         }
         
-//        let networkLoggerPlugin = NetworkLoggerPlugin.init(verbose: true, cURL: false, output: { (_ separator: String, _ terminator: String, _ items: Any...) in
-//            for item in items {
-//                log.debug(item)
-//                //        log.debug(separator)
-//                //        log.debug(terminator)
-//            }
-//        }, requestDataFormatter: nil) { (data) -> (Data) in
-//            do {
-//                let dataAsJSON = try JSONSerialization.jsonObject(with: data)// Data 转 JSON
-//                let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)// JSON 转 Data，格式化输出。
-//                return prettyData
-//            } catch {
-//                return data
-//            }
-//        }
+        //        let networkLoggerPlugin = NetworkLoggerPlugin.init(verbose: true, cURL: false, output: { (_ separator: String, _ terminator: String, _ items: Any...) in
+        //            for item in items {
+        //                log.debug(item)
+        //                //        log.debug(separator)
+        //                //        log.debug(terminator)
+        //            }
+        //        }, requestDataFormatter: nil) { (data) -> (Data) in
+        //            do {
+        //                let dataAsJSON = try JSONSerialization.jsonObject(with: data)// Data 转 JSON
+        //                let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)// JSON 转 Data，格式化输出。
+        //                return prettyData
+        //            } catch {
+        //                return data
+        //            }
+        //        }
         return [networkActivityPlugin]
     }
 }
 
 extension Networking {
     
-    func requet<M: ResponseData>(_ target: T,_ model: M.Type) -> Single<M>{
+    func requetModel<M: ResponseData>(_ target: T,_ model: M.Type) -> Single<M>{
         
         return Single.create { (single) -> Disposable in
             let cancellableToken = self.provider.request(target) { result in
@@ -145,14 +145,34 @@ extension Networking {
                 }
             }
             
-            return Disposables.create {
-                cancellableToken.cancel()
-            }
+            return Disposables.create { cancellableToken.cancel() }
         }
         
     }
     
-    
+    func requestData(_ target: T) -> Single<[String:Any]> {
+        return Single.create { (single) -> Disposable in
+            let cancellableToken = self.provider.request(target) { (result) in
+                switch result {
+                case .success(let response):
+                    do {
+                        let dataString = try response.mapJSON()
+                        single(.success(dataString as? [String : Any] ?? [:]))
+                    } catch {
+                        let object = NetworkError.init(code: 100, msg: "数据格式错误，解析失败！")
+                        single(.error(object))
+                    }
+                    
+                case .failure(let error):
+                    let object = NetworkError.init(code: 100, msg: error.localizedDescription)
+                    single(.error(object))
+                }
+            }
+            
+            return Disposables.create { cancellableToken.cancel() }
+        }
+    }
 }
+
 
 

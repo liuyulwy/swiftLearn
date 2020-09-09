@@ -27,7 +27,6 @@ public struct MyServerConfig {
         parameters["timeStamp"] = timeStamp
         parameters["version"] = UIApplication.shared.version
         parameters["randStr"] = randStr
-        parameters["ip"] = getIP() ?? ""
         parameters["signature"] = MyServerConfig.signature(timeStamp: timeStamp,randStr: randStr)
         return parameters
     }

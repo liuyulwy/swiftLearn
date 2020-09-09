@@ -29,7 +29,7 @@ extension MyServerApi: MyServerType {
         case .userProfile(_):
             return .get("path")
         case .databaseNav:
-            return .get("config/getNav")
+            return .get("config/getNavs")
         default: break
             
         }
@@ -62,9 +62,10 @@ extension MyServerApi: MyServerType {
     }
     
     public var task: Moya.Task {
+        guard let parameters = self.parameters else { return .requestPlain }
+        
         switch self {
         case .databaseNav:
-            guard let parameters = self.parameters else { return .requestPlain }
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         default:
             return .requestPlain

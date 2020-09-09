@@ -15,7 +15,7 @@
 		1717D8EA24A9C2B70096C1D1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717D8E924A9C2B70096C1D1 /* Route.swift */; };
 		172670752491EEB8000387FA /* TabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172670742491EEB8000387FA /* TabbarItemContentView.swift */; };
 		1757949524F4FDCF005A10DA /* LoginValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757949424F4FDCF005A10DA /* LoginValidationService.swift */; };
-		175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E95A124A1F41B00F6BC67 /* LYApi.swift */; };
+		175F8EFB2508A60B00F9521A /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175F8EFA2508A60B00F9521A /* RestApi.swift */; };
 		1760FC3924BD3A8200B8CF46 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */; };
 		176A0C9C24EE5AB5007857DE /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A0C9B24EE5AB5007857DE /* Navigator.swift */; };
 		1773342324AC5A070086303C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1773342224AC5A070086303C /* Model.swift */; };
@@ -74,7 +74,6 @@
 		17DA695624AB096700BC5541 /* Single+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DA695424AB096700BC5541 /* Single+ObjectMapper.swift */; };
 		17DA695724AB096700BC5541 /* ObservableType+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DA695524AB096700BC5541 /* ObservableType+ObjectMapper.swift */; };
 		17DA695924AB0BDA00BC5541 /* NetworkStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DA695824AB0BDA00BC5541 /* NetworkStatusManager.swift */; };
-		17DA695B24AB344300BC5541 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DA695A24AB344300BC5541 /* Device.swift */; };
 		17DA695D24AB395300BC5541 /* BridgeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DA695C24AB395300BC5541 /* BridgeHeader.h */; };
 		17DF8AED24A8236A0098DCDE /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF8AEC24A8236A0098DCDE /* NetWork.swift */; };
 		17DF8B1024A86DCF0098DCDE /* MyServerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF8B0F24A86DCF0098DCDE /* MyServerType.swift */; };
@@ -132,7 +131,7 @@
 		1717D8E924A9C2B70096C1D1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		172670742491EEB8000387FA /* TabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItemContentView.swift; sourceTree = "<group>"; };
 		1757949424F4FDCF005A10DA /* LoginValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationService.swift; sourceTree = "<group>"; };
-		175E95A124A1F41B00F6BC67 /* LYApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYApi.swift; sourceTree = "<group>"; };
+		175F8EFA2508A60B00F9521A /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		1760FC3824BD3A8200B8CF46 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		176A0C9B24EE5AB5007857DE /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		1773342224AC5A070086303C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -191,7 +190,6 @@
 		17DA695424AB096700BC5541 /* Single+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+ObjectMapper.swift"; sourceTree = "<group>"; };
 		17DA695524AB096700BC5541 /* ObservableType+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+ObjectMapper.swift"; sourceTree = "<group>"; };
 		17DA695824AB0BDA00BC5541 /* NetworkStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusManager.swift; sourceTree = "<group>"; };
-		17DA695A24AB344300BC5541 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		17DA695C24AB395300BC5541 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		17DF8AEC24A8236A0098DCDE /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		17DF8B0F24A86DCF0098DCDE /* MyServerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServerType.swift; sourceTree = "<group>"; };
@@ -306,15 +304,14 @@
 		175E95A024A1F33000F6BC67 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				175E95A124A1F41B00F6BC67 /* LYApi.swift */,
 				17DF8AEC24A8236A0098DCDE /* NetWork.swift */,
 				17DF8B0F24A86DCF0098DCDE /* MyServerType.swift */,
 				17DF8B1124A86EAF0098DCDE /* MyServerConfig.swift */,
 				17DF8B1324A872CE0098DCDE /* MyServerApi.swift */,
 				1717D8E924A9C2B70096C1D1 /* Route.swift */,
 				17DA695824AB0BDA00BC5541 /* NetworkStatusManager.swift */,
-				17DA695A24AB344300BC5541 /* Device.swift */,
 				1773342224AC5A070086303C /* Model.swift */,
+				175F8EFA2508A60B00F9521A /* RestApi.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -818,7 +815,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17DA695B24AB344300BC5541 /* Device.swift in Sources */,
 				176A0C9C24EE5AB5007857DE /* Navigator.swift in Sources */,
 				17DA693724AB083700BC5541 /* Deserializer.swift in Sources */,
 				1799FDA424ED1A9600DA1402 /* LoginViewModel.swift in Sources */,
@@ -828,7 +824,6 @@
 				1717AA4C249A05E8000851B6 /* IntegralViewController.swift in Sources */,
 				1717AA4A249A05DA000851B6 /* DataBaseViewController.swift in Sources */,
 				17DA693C24AB083700BC5541 /* MangledName.swift in Sources */,
-				175E95A224A1F41B00F6BC67 /* LYApi.swift in Sources */,
 				17A2320524A2F0B600D1BE34 /* Observable+Response.swift in Sources */,
 				1717AA46249A05BE000851B6 /* HomeViewController.swift in Sources */,
 				17DA693A24AB083700BC5541 /* ContextDescriptorType.swift in Sources */,
@@ -882,6 +877,7 @@
 				17DA692924AB083700BC5541 /* PropertyInfo.swift in Sources */,
 				17DA693624AB083700BC5541 /* ExtendCustomModelType.swift in Sources */,
 				17DA694E24AB083700BC5541 /* ReflectionHelper.swift in Sources */,
+				175F8EFB2508A60B00F9521A /* RestApi.swift in Sources */,
 				17DA692F24AB083700BC5541 /* EnumTransform.swift in Sources */,
 				17DA694724AB083700BC5541 /* TransformOf.swift in Sources */,
 				17DA692E24AB083700BC5541 /* HexColorTransform.swift in Sources */,

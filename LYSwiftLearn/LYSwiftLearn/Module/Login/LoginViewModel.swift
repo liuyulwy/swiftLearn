@@ -28,14 +28,20 @@ class LoginViewModel: ViewModel, ViewModelType {
         
         let validatedUserName = input.userName.map { LoginValidationService.default.validateUserName(userName: $0) }
         let validatedPassword = input.password.map { LoginValidationService.default.validatePassword(passworld: $0) }
-        let signingIn = ActivityIndicator().asDriver()
+        let signingIn = ActivityIndicator()
         let signupEnable = Driver.combineLatest(validatedUserName, validatedPassword, signingIn) { (userName, password, signingIn) in
             return userName.isValid && password.isValid && !signingIn
         }.distinctUntilChanged()
         let usernameAndPassword = Driver.combineLatest(input.userName, input.password) { (username: $0, password: $1) }
-       
+        let signedIn = input.loginTap.withLatestFrom(usernameAndPassword).flatMapLatest { (_)  in
+            return serverApi.requetModel(.databaseNav, ResponseArrayData<NavItems>.self).trackActivity(signingIn).asDriver(onErrorJustReturn: ResponseArrayData.init())
+
+        }.drive(onNext: { (items: ResponseArrayData<NavItems>) in
+            print(items.data ?? "")
+            })
         
         
-        return Output.init(validatedUserName: validatedUserName, validatedPassword: validatedPassword, signingIn: signingIn, signupEnable: signupEnable)
+        
+        return Output.init(validatedUserName: validatedUserName, validatedPassword: validatedPassword, signingIn: signingIn.asDriver(), signupEnable: signupEnable)
     }
 }

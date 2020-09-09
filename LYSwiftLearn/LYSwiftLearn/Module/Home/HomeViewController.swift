@@ -89,7 +89,12 @@ class HomeViewController: BaseViewController {
 //        }) {
 //
 //        }.disposed(by: disposeBag)
-        
+        serverApi.requestData(.databaseNav).subscribe(onSuccess: { (res) in
+            
+            print(res["code"])
+        }) { (error) in
+            print(error)
+        }.disposed(by: disposeBag)
         let loginViewModel = LoginViewModel.init()
         navigator.show(segue: .login(viewModel: loginViewModel), sender: self, transition: .customModal(type: .fade))
     

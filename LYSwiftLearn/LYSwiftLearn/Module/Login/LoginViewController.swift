@@ -16,6 +16,8 @@ class LoginViewController: BaseViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -71,7 +73,7 @@ class LoginViewController: BaseViewController {
         })
         .disposed(by: disposeBag)
         
-        
+        output.signingIn.drive(activity.rx.isAnimating).disposed(by: disposeBag)
         
         
     }

@@ -33,12 +33,12 @@ class ResponseData: BaseModel {
     }
 }
 
-class ReturnArrayData<T: BaseModel>: ResponseData {
+class ResponseArrayData<T: BaseModel>: ResponseData {
     var data:[T]?
     required init() {}
 }
 
-class ReturnData<T: BaseModel>: ResponseData {
+class ResponseObjectData<T: BaseModel>: ResponseData {
     var data:T?
     required init() {}
 }

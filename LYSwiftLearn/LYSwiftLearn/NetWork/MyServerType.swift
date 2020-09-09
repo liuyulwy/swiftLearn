@@ -53,7 +53,7 @@ extension MyServerType {
     
     //验证
     public var validationType: ValidationType {
-        return .successCodes
+        return .none
     }
     
     var isShowLoading: Bool {
