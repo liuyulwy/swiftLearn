@@ -14,6 +14,8 @@ import XCGLogger
 import Moya
 import RxCocoa
 import SkeletonView
+import NVActivityIndicatorView
+
 class HomeViewController: BaseViewController {
     let loading = ActivityIndicator()
     override func viewWillAppear(_ animated: Bool) {
@@ -79,22 +81,7 @@ class HomeViewController: BaseViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        startAnimating()
-//        serverApi.requet(.databaseNav, ReturnArrayData<NavItems>.self).trackActivity(loading).asObservable().subscribe(onNext: { (res) in
-//
-//        }, onError: { (err) in
-//
-//        }, onCompleted: {
-//            self.stopAnimating()
-//        }) {
-//
-//        }.disposed(by: disposeBag)
-        serverApi.requestData(.databaseNav).subscribe(onSuccess: { (res) in
-            
-            print(res["code"])
-        }) { (error) in
-            print(error)
-        }.disposed(by: disposeBag)
+        
         let loginViewModel = LoginViewModel.init()
         navigator.show(segue: .login(viewModel: loginViewModel), sender: self, transition: .customModal(type: .fade))
     

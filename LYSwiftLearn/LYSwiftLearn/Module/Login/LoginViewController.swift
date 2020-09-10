@@ -44,7 +44,7 @@ class LoginViewController: BaseViewController {
         super.bindViewModel()
         
         guard let viewModel = self.viewModel as? LoginViewModel else { return }
-        let input = LoginViewModel.Input( userName: self.userNameTextField.rx.text.orEmpty.asDriver(), password: self.passworldTextField.rx.text.orEmpty.asDriver(), loginTap: self.loginButton.rx.tap.asSignal() )
+        let input = LoginViewModel.Input( userName: self.userNameTextField.rx.text.orEmpty.asDriver(), password: self.passworldTextField.rx.text.orEmpty.asDriver(), loginTap: self.loginButton.rx.tap.asDriver() )
         let output = viewModel.transform(input: input)
         
         output.signupEnable.drive(onNext: { [weak self] (enable) in
@@ -74,7 +74,10 @@ class LoginViewController: BaseViewController {
         .disposed(by: disposeBag)
         
         output.signingIn.drive(activity.rx.isAnimating).disposed(by: disposeBag)
-        
+        output.signedIn.drive(onNext: { (result) in
+            print(result)
+        }).disposed(by: disposeBag)
+
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

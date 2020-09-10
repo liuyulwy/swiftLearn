@@ -112,7 +112,7 @@ extension Networking {
 
 extension Networking {
     
-    func requetModel<M: ResponseData>(_ target: T,_ model: M.Type) -> Single<M>{
+    func requestModel<M: ResponseData>(_ target: T,_ model: M.Type) -> Single<M>{
         
         return Single.create { (single) -> Disposable in
             let cancellableToken = self.provider.request(target) { result in
@@ -130,17 +130,17 @@ extension Networking {
                             }
                             
                         }else {
-                            let object = NetworkError.init(code: 100, msg: "数据格式错误，解析失败！")
+                            let object = NetworkError.init(code: response.statusCode, msg: "数据格式错误，解析失败！")
                             single(.error(object))
                         }
                         
                     } catch {
-                        let object = NetworkError.init(code: 100, msg: "数据格式错误，解析失败！")
+                        let object = NetworkError.init(code: response.statusCode, msg: "数据格式错误，解析失败！")
                         single(.error(object))
                     }
                     
                 case let .failure(error):
-                    let object = NetworkError.init(code: 100, msg: error.localizedDescription)
+                    let object = NetworkError.init(code: error.errorCode, msg: error.localizedDescription)
                     single(.error(object))
                 }
             }
@@ -159,12 +159,12 @@ extension Networking {
                         let dataString = try response.mapJSON()
                         single(.success(dataString as? [String : Any] ?? [:]))
                     } catch {
-                        let object = NetworkError.init(code: 100, msg: "数据格式错误，解析失败！")
+                        let object = NetworkError.init(code: response.statusCode, msg: "数据格式错误，解析失败！")
                         single(.error(object))
                     }
                     
                 case .failure(let error):
-                    let object = NetworkError.init(code: 100, msg: error.localizedDescription)
+                    let object = NetworkError.init(code: error.errorCode, msg: error.localizedDescription)
                     single(.error(object))
                 }
             }

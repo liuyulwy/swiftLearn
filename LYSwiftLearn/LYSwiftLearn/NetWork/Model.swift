@@ -70,3 +70,11 @@ class Items: BaseModel {
     var side_href: String?
     required init() {}
 }
+
+class LoginInfoModel: BaseModel {
+    var username: String?
+    var mobile: String?
+    var accessToken: String?
+    var uid: String?
+}
+

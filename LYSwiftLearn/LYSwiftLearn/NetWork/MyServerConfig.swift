@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import CryptoSwift
+
 public struct MyServerConfig {
     static let baseUrl: String = "https://appapi-dev.yaozh.com/"
     static let timeoutInterval: Double = 15.0
@@ -36,7 +38,7 @@ public struct MyServerConfig {
         array = array.sorted { (a, b) -> Bool in
             return a.localizedStandardCompare(b) == .orderedAscending
         }
-        return array.joined()
+        return array.joined().sha1().md5().uppercased()
     }
 }
 

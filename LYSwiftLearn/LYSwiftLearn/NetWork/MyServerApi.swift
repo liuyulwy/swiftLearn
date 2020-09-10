@@ -16,6 +16,7 @@ enum MyServerApi {
     case userProfile(String)
     case userRepositories(String)
     case databaseNav
+    case login(name: String, pwd: String, rgid: String, channel:String, first_installation:String)
 }
 
 extension MyServerApi: MyServerType {
@@ -30,6 +31,8 @@ extension MyServerApi: MyServerType {
             return .get("path")
         case .databaseNav:
             return .get("config/getNavs")
+        case .login(_, _, _, _, _):
+            return .get("user/login")
         default: break
             
         }
@@ -45,6 +48,14 @@ extension MyServerApi: MyServerType {
         switch self {
         case .userProfile(let name):
             tempParameters["name"] = name
+            
+        case let .login(name, pwd, rgid, channel, first_installation):
+            tempParameters["name"] = name
+            tempParameters["pwd"] = pwd
+            tempParameters["rgid"] = rgid
+            tempParameters["channel"] = channel
+            tempParameters["first_installation"] = first_installation
+            
         default: break
             
         }
@@ -62,13 +73,12 @@ extension MyServerApi: MyServerType {
     }
     
     public var task: Moya.Task {
-        guard let parameters = self.parameters else { return .requestPlain }
         
         switch self {
-        case .databaseNav:
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        
         default:
-            return .requestPlain
+            guard let parameters = self.parameters else { return .requestPlain }
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
 }
