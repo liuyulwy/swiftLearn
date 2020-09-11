@@ -78,13 +78,17 @@ class HomeViewController: BaseViewController {
         view.isSkeletonable = true
         view1.isSkeletonable = true
         self.view.showAnimatedSkeleton()
+        
+        
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         let loginViewModel = LoginViewModel.init()
         navigator.show(segue: .login(viewModel: loginViewModel), sender: self, transition: .customModal(type: .fade))
-    
+     
     }
+    
     
 }

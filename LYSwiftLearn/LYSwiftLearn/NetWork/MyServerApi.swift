@@ -81,4 +81,36 @@ extension MyServerApi: MyServerType {
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
+    
+    
+    func encrypt(plaintext: String, salt: String) -> String {
+        let b_salt = String.init(salt.utf8).md5().bytes
+        let b_plaintext = String.init(plaintext.utf8).bytes
+        var result = [UInt8]()
+        var index = 0
+        for b in b_plaintext {
+            if index == 32 { index = 0}
+            let s = b ^ b_salt[index]
+            result.append(s)
+            index = index + 1
+        }
+        return Data(result).base64EncodedString()
+    }
+    
+    func decrypt(ciphertext: String, salt: String) -> String {
+        let b_salt = String.init(salt.utf8).md5().bytes
+        let b_ciphertext = Data(base64Encoded: ciphertext)?.bytes
+        guard let b_text = b_ciphertext else {
+            return ""
+        }
+        var result = [UInt8]()
+        var index = 0
+        for b in b_text {
+            if index == 32 { index = 0}
+            let s = b ^ b_salt[index]
+            result.append(s)
+            index = index + 1
+        }
+        return String(bytes: result, encoding: .utf8) ?? ""
+    }
 }
