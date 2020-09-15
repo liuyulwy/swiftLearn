@@ -50,6 +50,9 @@ target 'LYSwiftLearn' do
     pod 'KeychainAccess'  #Keychain
     pod 'NVActivityIndicatorView'  #加载指示器
     pod 'Kingfisher'  #图片下载、缓存的框架，灵感取自于SDWebImage
+    #toast
+    pod 'Toaster'
+    pod 'SwiftMessages'
     ##日志
     pod 'XCGLogger'
     pod 'SwiftLint'    #限定 Swift 样式和条例的工具

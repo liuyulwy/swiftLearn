@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toaster
 
 class LoginViewController: BaseViewController {
     
@@ -24,7 +25,7 @@ class LoginViewController: BaseViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.isTranslucent = false
@@ -37,7 +38,7 @@ class LoginViewController: BaseViewController {
     }
     
     override func makeUI() {
-   
+        
     }
     
     override func bindViewModel() {
@@ -50,8 +51,7 @@ class LoginViewController: BaseViewController {
         output.signupEnable.drive(onNext: { [weak self] (enable) in
             self?.loginButton.isEnabled = enable
             self?.loginButton.alpha = enable ? 1.0 : 0.5
-        })
-        .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
         
         output.validatedUserName.drive(onNext: { (result) in
             switch result {
@@ -60,8 +60,7 @@ class LoginViewController: BaseViewController {
             default:
                 self.userNameTextField.superview?.layer.borderColor = UIColor.red.cgColor
             }
-        })
-        .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
         
         output.validatedPassword.drive(onNext: { (result) in
             switch result {
@@ -70,17 +69,24 @@ class LoginViewController: BaseViewController {
             default:
                 self.passworldTextField.superview?.layer.borderColor = UIColor.red.cgColor
             }
-        })
-        .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
         
         output.signingIn.drive(activity.rx.isAnimating).disposed(by: disposeBag)
-        output.signedIn.drive(onNext: { (result) in
-            print(result)
+        
+        viewModel.error.asDriver().drive(onNext: { (error) in
+            if let e = error as? NetworkError {
+                print(e.code, e.msg)
+                //                Toast.init(text: e.msg).show()
+            }
         }).disposed(by: disposeBag)
-
+        
+        output.signedIn.drive(onNext: { (result) in
+            
+        }).disposed(by: disposeBag)
         
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
     }
 }

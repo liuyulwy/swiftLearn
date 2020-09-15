@@ -122,7 +122,7 @@ extension Networking {
                         let dataString = try response.mapString()// Data 转 JSON
                         let object = JSONDeserializer<M>.deserializeFrom(json: dataString)
                         if object != nil {
-                            if object!.success {
+                            if object!.isSuccess {
                                 single(.success(object!))
                             }else {
                                 let object = NetworkError.init(code: object!.code, msg: object!.msg)

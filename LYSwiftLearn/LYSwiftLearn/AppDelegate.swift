@@ -11,6 +11,8 @@ import XCGLogger
 import SwifterSwift
 import RxSwift
 import IQKeyboardManagerSwift
+import Toaster
+
 let log: XCGLogger = {
     let log = XCGLogger.init(identifier: "advancedLogger", includeDefaultDestinations: false)
     //控制台打印设置
@@ -45,10 +47,10 @@ let log: XCGLogger = {
     //转存回调
     autoRotatingFileDestination.autoRotationCompletion = { sucess in
         if sucess {
-//            print("====:\(autoRotatingFileDestination.archivedFileURLs())")
+            //            print("====:\(autoRotatingFileDestination.archivedFileURLs())")
         }
     }
- 
+    
     //设置 outputLevel
     switch UIApplication.shared.inferredEnvironment {
     case .debug:
@@ -88,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainController
         window?.makeKeyAndVisible()
         setKeyboard()
-        
+        configureAppearance()
         NetworkStatusManager.sharedManager.startNetworkReachabilityObserver()
         #if DEBUG
         _ = Observable<Int>.interval(.seconds(60), scheduler: MainScheduler.instance)
@@ -105,5 +107,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "完成"
         
+    }
+    
+    func configureAppearance() {
+        let appearance: Toaster.ToastView = Toaster.ToastView.appearance()
+        appearance.backgroundColor = .black
+        appearance.textColor = .white
+        appearance.font = .boldSystemFont(ofSize: 16)
+        appearance.textInsets = UIEdgeInsets(top: 15, left: 20, bottom: 15, right: 20)
+        appearance.bottomOffsetPortrait = 100
+//        appearance.cornerRadius = 20
+//        appearance.maxWidthRatio = 0.7
     }
 }

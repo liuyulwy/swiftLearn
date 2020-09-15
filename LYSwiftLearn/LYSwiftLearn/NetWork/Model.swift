@@ -25,11 +25,11 @@ class BaseModel: BaseModelProtocol{
 class ResponseData: BaseModel {
     var code: Int = 0
     var msg: String = ""
-    var success: Bool = false
+    var isSuccess: Bool = false
     required init() {}
     
     override func didFinishMapping() {
-        success = (code == 200 ? true : false)
+        isSuccess = (code == 200 ? true : false)
     }
 }
 

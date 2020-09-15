@@ -18,5 +18,5 @@ protocol ViewModelType {
 }
 
 class ViewModel: NSObject {
-  
+  let error = ErrorTracker()
 }

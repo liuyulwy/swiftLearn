@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import CryptoSwift
+import Toaster
 
 class LoginViewModel: ViewModel, ViewModelType {
     
@@ -23,7 +24,7 @@ class LoginViewModel: ViewModel, ViewModelType {
         let validatedPassword: Driver<ValidationResult>
         let signingIn: Driver<Bool>
         let signupEnable: Driver<Bool>
-        let signedIn: Driver<Bool>
+        let signedIn: Driver<ResponseObjectData<LoginInfoModel>>
     }
 
     func transform(input: Input) -> Output {
@@ -41,15 +42,16 @@ class LoginViewModel: ViewModel, ViewModelType {
         let up = Driver.combineLatest(input.userName, input.password) {($0, $1)}
         
         let signedIn = input.loginTap.withLatestFrom(up).flatMap { (name,pwd) -> Driver<ResponseObjectData<LoginInfoModel>> in
-            return RestApi.defualt.login(name: name, pwd: pwd.md5()).trackActivity(signingIn).asDriver { (error) -> Driver<ResponseObjectData<LoginInfoModel>> in
+            return RestApi.defualt.login(name: name, pwd: pwd.md5()).trackActivity(signingIn).trackError(self.error).asDriver { (error) -> Driver<ResponseObjectData<LoginInfoModel>> in
                 if let e = error as? NetworkError {
-                    print(e.code, e.msg)
+                    Toast.init(text: e.msg).show()
                 }
-                return Driver.just(ResponseObjectData<LoginInfoModel>())
+                return Driver.empty()
             }
-        }.flatMap { (result) -> Driver<Bool> in
-            return Driver.just(result.success)
-        }
+        }.flatMap({ (result) -> Driver<ResponseObjectData<LoginInfoModel>> in
+            Toast.init(text: result.msg).show()
+            return Driver.just(result)
+        })
         
         return Output.init(validatedUserName: validatedUserName, validatedPassword: validatedPassword, signingIn: signingIn.asDriver(), signupEnable: signupEnable ,signedIn: signedIn)
     }
